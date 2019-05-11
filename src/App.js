@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 import './App.css';
 
 const api = {
-  endpoint: 'https://lgapi-us.libapps.com/1.2/oauth/token',
+  authorize_url: 'https://lgapi-us.libapps.com/1.2/oauth/token',
+  libguides_url: 'https://lgapi-us.libapps.com/1.2/az',
   client_id: "406",
   client_secret: "70a2cdb608f280d3b85a0f97f4b8bad3",
 }
@@ -14,16 +16,17 @@ class App extends Component {
     super(props);
 
     this.state ={
-      authorization: null
+      authorization: null,
+      libguides: null
     }
 
   }
 
   libAuthorize() {
 
-    let {endpoint, client_id, client_secret} = api
+    let {authorize_url, client_id, client_secret} = api
 
-    const credientals =
+    const credentials =
         'client_id=' + client_id +
         '&client_secret=' + client_secret +
         '&grant_type=client_credentials'
@@ -33,18 +36,51 @@ class App extends Component {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
-      body: credientals
+      body: credentials
     };
 
-    fetch(endpoint, post)
+    fetch(authorize_url, post)
         .then(response => response.json())
         .then(data => {
           if (data !== null) {
             this.setState({
               authorization: data
-            })
+            });
+
+            this.libGetData(data.access_token);
           }
         })
+
+  }
+
+  libGetData(access_token) {
+
+    let {libguides_url} = api
+
+    let get = {
+      method: 'GET',
+      headers: {
+        "Authorization": "Bearer " + access_token
+      }
+    };
+
+    axios.get(libguides_url, get)
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+
+    // fetch(libguides_url, get)
+    //     .then(response => response.json())
+    //     .then(data => {
+    //       if (data !== null) {
+    //         this.setState({
+    //           libguides: data
+    //         });
+    //       }
+    //     })
 
   }
 
