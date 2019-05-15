@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import { Dropdown, Input } from 'semantic-ui-react'
+import _ from 'lodash';
+
+import {DataSubjects} from './DataSubjects';
 
 class ResearchTools extends Component {
 
@@ -7,13 +11,82 @@ class ResearchTools extends Component {
 
         this.state ={
             expanded: false,
-            subject: null
+            subjectSlug: null,
+            subjectTitle: null,
+            availableOptions: DataSubjects
         }
     }
 
+    selectSubject = (e, option) => {
+        /*
+         * real magic happens here.
+         */
+
+        this.setState({
+            subjectSlug: option.value,
+            subjectTitle: option.text
+        })
+    }
+
+    onInputFocus = (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+    }
+
+    applyFilter = (e) => {
+        const searchQuery = e.target.value
+
+        if(searchQuery == '') {
+            this.setState({
+                availableOptions: DataSubjects
+            })
+            return
+        }
+
+        console.log ()
+
+        let filtered = _.filter(this.state.availableOptions, function(o) {
+
+            // find matching strings, regex this in future for more flexible results.
+            return _.startsWith(_.lowerCase(o.title), _.lowerCase(searchQuery))
+        });
+
+        this.setState({availableOptions: filtered})
+    }
+
     render() {
+
         return (
-            <div className="utk-panel--research-tools">@todo: researchtools</div>
+            <div className="utk-panel--research-tools">
+                <div className="utk-research-tools">
+                    <h3>Find Research Tools</h3>
+                    <Dropdown
+                        text='Filter by Subject'
+                        icon='filter'
+                        floating
+                        labeled
+                        button
+                        className='icon'
+                        onChange={this.applyFilter}
+                    >
+                        <Dropdown.Menu>
+                            <Input icon='search'
+                                   iconPosition='left'
+                                   className='search'
+                                   onFocus={this.onInputFocus}
+                                   onClick={this.onInputFocus} />
+                            <Dropdown.Menu scrolling>
+                                {this.state.availableOptions.map(option => (
+                                    <Dropdown.Item key={option.slug}
+                                                   value={option.slug}
+                                                   text={option.title}
+                                                   onClick={this.selectSubject.bind(option)}  />
+                                ))}
+                            </Dropdown.Menu>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </div>
+            </div>
         )
     }
 }

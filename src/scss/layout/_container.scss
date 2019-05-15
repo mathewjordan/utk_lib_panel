@@ -1,19 +1,27 @@
 #utk-panel {
-  background-color: $smokeyx;
+  background-color: $smokey;
   color: $white;
 
   .utk-panel {
-    padding: $golden-ratio-4 0;
+    font-family: $sans;
+    font-size: $type-3;
+    padding: $golden-ratio-5 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    min-height: $golden-ratio-8;
 
-    > div:first-child {
-      width: $gr-long;
-    }
+    > div {
+      display: flex;
+      align-items: flex-end;
 
-    > div:last-child {
-      width: $gr-short;
+      &:first-child {
+        width: $gr-long;
+      }
+
+      &:last-child {
+        width: $gr-short;
+      }
     }
   }
 }

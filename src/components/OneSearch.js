@@ -4,7 +4,11 @@ class OneSearch extends Component {
 
     render() {
         return (
-            <div className="utk-panel--onesearch">@todo: onesearch</div>
+            <div className="utk-panel--onesearch">
+                <div className="utk-onesearch">
+                    @todo do the onesearch right.
+                </div>
+            </div>
         )
     }
 }
