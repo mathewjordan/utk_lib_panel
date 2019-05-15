@@ -26,7 +26,7 @@ body {
   }
 
   .ui.labeled.icon.button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     align-content: center;
     background-color: $gray-1;
@@ -35,12 +35,14 @@ body {
     border-radius: $golden-ratio-0;
     border-top-right-radius: $golden-ratio-2;
     border-bottom-right-radius: $golden-ratio-2;
-    font-size: $type-3;
+    font-size: $type-2;
+    white-space: nowrap;
     height: $golden-ratio-4;
     padding: 0 calc(#{$golden-ratio-4 + $golden-ratio-2}) 0 $golden-ratio-2 !important;
     box-shadow: $box-shadow-float;
     width: $gr-long;
     max-width: 100%;
+    transition: $transition-all-fast;
 
     &:hover,
     &.active {
@@ -63,6 +65,10 @@ body {
         opacity: 1;
       }
     }
+  }
+
+  .utk-panel-focus-research-tools .ui.labeled.icon.button {
+    width: calc(100% - #{$golden-ratio-5});
   }
 
   .ui.floating.dropdown>.menu {

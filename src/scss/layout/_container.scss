@@ -8,18 +8,46 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    min-height: $golden-ratio-8;
+    transition: $transition-all;
 
     > div {
       display: flex;
-      align-items: flex-end;
+      transition: $transition-all;
+    }
 
-      &:first-child {
+    &-focus-onesearch {
+      height: auto;
+
+      .utk-panel--onesearch {
         width: $gr-long;
+        opacity: 1;
       }
 
-      &:last-child {
+      .utk-panel--research-tools {
         width: $gr-short;
+      }
+
+      .utk-panel--subject-guide {
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+      }
+    }
+
+    &-focus-research-tools {
+      .utk-panel--onesearch {
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+      }
+
+      .utk-panel--research-tools {
+        width: $gr-short;
+      }
+
+      .utk-panel--subject-guide {
+        opacity: 1;
+        width: $gr-long;
       }
     }
   }

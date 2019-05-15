@@ -10,18 +10,36 @@ class ResearchTools extends Component {
         super(props);
 
         this.state ={
-            expanded: false,
-            subjectSlug: null,
-            subjectTitle: null,
             availableOptions: DataSubjects
         }
     }
 
-    dropdownText (title) {
-        if (!title)
+    backButton () {
+        return (
+            <a className="utk-collapse-research-tools"
+                   onClick={this.collapseResearchTools.bind(this)}>
+            <i className="material-icons-round">cancel</i> Back to Search
+            </a>
+        )
+
+    }
+
+    dropdownText (subject) {
+        if (!subject)
             return 'Search by Subject'
         else
-            return this.state.subjectTitle
+            return subject
+    }
+
+    collapseResearchTools = (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+
+        this.props.guideExpanded({
+            status: false,
+            subjectSlug: null,
+            subjectTitle: null
+        });
     }
 
     selectSubject = (e, option) => {
@@ -29,10 +47,11 @@ class ResearchTools extends Component {
          * real magic happens here.
          */
 
-        this.setState({
+        this.props.guideExpanded({
+            status: true,
             subjectSlug: option.value,
             subjectTitle: option.text
-        })
+        });
     }
 
     onInputFocus = (e) => {
@@ -50,8 +69,6 @@ class ResearchTools extends Component {
             return
         }
 
-        console.log ()
-
         let filtered = _.filter(this.state.availableOptions, function(o) {
 
             // find matching strings, regex this in future for more flexible results.
@@ -66,9 +83,9 @@ class ResearchTools extends Component {
         return (
             <div className="utk-panel--research-tools">
                 <div className="utk-research-tools">
-                    <h3>Research Tools</h3>
+                    <h3>Find Research Tools</h3>
                     <Dropdown
-                        text={this.dropdownText(this.state.subjectTitle)}
+                        text={this.dropdownText(this.props.activeSubject)}
                         icon='angle down'
                         floating
                         labeled
@@ -92,6 +109,7 @@ class ResearchTools extends Component {
                             </Dropdown.Menu>
                         </Dropdown.Menu>
                     </Dropdown>
+                    {this.backButton(this.props.activeSubject)}
                 </div>
             </div>
         )

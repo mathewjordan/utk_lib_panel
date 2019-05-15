@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import OneSearch from "./components/OneSearch";
 import ResearchTools from "./components/ResearchTools";
+import SubjectGuide from "./components/SubjectGuide";
 
 class Panel extends Component {
 
@@ -9,17 +10,42 @@ class Panel extends Component {
     super(props);
 
     this.state ={
-      priority: 'OneSearch'
+      panelFocus: 'onesearch',
+      activeSubject: null,
+      guideExpanded: false
+    }
+
+    this.guideExpanded = this.guideExpanded.bind(this);
+  }
+
+  guideExpanded(status) {
+    if (status.status) {
+      this.setState({
+        panelFocus: 'research-tools',
+        activeSubject: status.subjectTitle,
+        guideExpanded: true
+      });
+    } else {
+      this.setState({
+        panelFocus: 'onesearch',
+        activeSubject: null,
+        guideExpanded: false
+      });
     }
   }
 
   render() {
+
+    let {panelFocus, activeSubject, guideExpanded} = this.state
+
     return (
       <div className="utk-panel-wrap">
         <div className="container utk-panel-container">
-            <div className="utk-panel">
+            <div className={`utk-panel utk-panel-focus-${panelFocus}`}>
             <OneSearch/>
-            <ResearchTools/>
+            <ResearchTools activeSubject={activeSubject}
+                           guideExpanded={this.guideExpanded}/>
+            <SubjectGuide activeSubject={activeSubject}/>
           </div>
         </div>
       </div>
