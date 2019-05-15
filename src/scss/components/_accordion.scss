@@ -1,0 +1,83 @@
+.accordion {
+  font-size: $type-3;
+  font-family: $sans;
+  border: 1px solid $gray-1;
+  border-radius: $golden-ratio-1;
+  overflow: hidden;
+
+  .title,
+  .content {
+  }
+
+  .title {
+    font-weight: 400;
+    font-size: $type-3;
+    border-bottom: 1px solid $gray-1;
+    padding: $golden-ratio-1 $golden-ratio-2;
+    border-right: 6px solid $gray-1;
+    cursor: pointer;
+
+    a,
+    a:visited {
+      color: $smokeyx;
+      text-decoration: none;
+      display: flex;
+      align-content: center;
+      align-items: center;
+
+      i {
+        font-size: 1.618em;
+        height: 1em;
+        line-height: 1em;
+        width: auto;
+        margin-right: $golden-ratio-0;
+        fill: $gray-3;
+      }
+    }
+
+    a:hover,
+    a:focus {
+      color: $globe
+    }
+
+    &:hover,
+    &:focus-within {
+      a,
+      a i {
+        color: $globe;
+        fill: $globe !important;
+      }
+    }
+
+    &.active {
+      font-weight: 700;
+      display: block;
+      border-bottom: none;
+      border-right-color: $orange;
+
+      a i {
+        fill: $smokeyx;
+      }
+    }
+  }
+
+  .content {
+    display: none;
+    padding: $golden-ratio-0 $golden-ratio-2 $golden-ratio-2;
+    border-bottom: 1px solid $gray-1;
+    border-right: 6px solid $gray-1;
+
+    *:first-child {
+      margin-top: 0 !important;
+    }
+
+    *:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    &.active {
+      display: block;
+      border-right-color: $orange;
+    }
+  }
+}

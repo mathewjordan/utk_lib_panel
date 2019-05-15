@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import axios from 'axios';
-import './App.css';
+
+import OneSearch from "./components/OneSearch";
+import ResearchTools from "./components/ResearchTools";
 
 const api = {
   authorize_url: 'https://lgapi-us.libapps.com/1.2/oauth/token',
@@ -9,7 +10,7 @@ const api = {
   client_secret: "70a2cdb608f280d3b85a0f97f4b8bad3",
 }
 
-class App extends Component {
+class Panel extends Component {
 
   constructor(props) {
 
@@ -90,11 +91,12 @@ class App extends Component {
 
   render() {
     return (
-        <div className="App">
-          nada
-        </div>
+      <div className="App">
+        <OneSearch/>
+        <ResearchTools/>
+      </div>
     );
   }
 }
 
-export default App;
+export default Panel;
