@@ -15,10 +15,12 @@ class Panel extends Component {
 
   render() {
     return (
-      <div className="container utk-panel-container">
-        <div className="utk-panel">
-          <OneSearch/>
-          <ResearchTools/>
+      <div className="utk-panel-wrap">
+        <div className="container utk-panel-container">
+            <div className="utk-panel">
+            <OneSearch/>
+            <ResearchTools/>
+          </div>
         </div>
       </div>
     );

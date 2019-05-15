@@ -17,6 +17,13 @@ class ResearchTools extends Component {
         }
     }
 
+    dropdownText (title) {
+        if (!title)
+            return 'Search by Subject'
+        else
+            return this.state.subjectTitle
+    }
+
     selectSubject = (e, option) => {
         /*
          * real magic happens here.
@@ -61,7 +68,7 @@ class ResearchTools extends Component {
                 <div className="utk-research-tools">
                     <h3>Research Tools</h3>
                     <Dropdown
-                        text='Find by Subject'
+                        text={this.dropdownText(this.state.subjectTitle)}
                         icon='angle down'
                         floating
                         labeled
