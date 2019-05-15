@@ -1,11 +1,10 @@
 #utk-panel {
-  background-color: $smokey;
+  background-color: $smokeyx;
   color: $white;
 
   .utk-panel {
-    font-family: $sans;
     font-size: $type-3;
-    padding: $golden-ratio-5 0;
+    padding: $golden-ratio-5 0 $golden-ratio-4;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;

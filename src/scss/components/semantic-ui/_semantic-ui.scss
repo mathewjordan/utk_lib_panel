@@ -1,0 +1,78 @@
+/*
+ * components
+ */
+@import "components/button";
+@import "components/dropdown";
+
+/*
+ * temp overrides for demoing... actual theme should be built
+ */
+
+body {
+  font-family: $sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: -0.015em !important;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $sans;
+  }
+
+  .ui.labeled.icon.button {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-color: $gray-1;
+    color: $smokeyx;
+    font-weight: 700;
+    border-radius: $golden-ratio-0;
+    border-top-right-radius: $golden-ratio-2;
+    border-bottom-right-radius: $golden-ratio-2;
+    font-size: $type-3;
+    height: $golden-ratio-4;
+    padding: 0 calc(#{$golden-ratio-4 + $golden-ratio-2}) 0 $golden-ratio-2 !important;
+    box-shadow: $box-shadow-float;
+    width: $gr-long;
+    max-width: 100%;
+
+    &:hover,
+    &.active {
+      background-color: $white;
+    }
+
+    > .icon {
+      left: auto !important;
+      opacity: 1;
+      right: 0;
+      height: $golden-ratio-4;
+      width: $golden-ratio-4;;
+      background-color: $globe !important;
+      border-radius: 0;
+      border-top-right-radius: $golden-ratio-0;
+      border-bottom-right-radius: $golden-ratio-0;
+
+      &::before {
+        color: $white;
+        opacity: 1;
+      }
+    }
+  }
+
+  .ui.button,
+  .ui.dropdown .menu>.item {
+    font-family: $sans;
+  }
+
+
+  .ui.dropdown .menu>.item {
+    font-size: $type-2;
+    counter-reset: $smokeyx;
+  }
+}
