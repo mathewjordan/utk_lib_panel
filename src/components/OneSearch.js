@@ -4,7 +4,7 @@ class OneSearch extends Component {
 
     render() {
         return (
-            <div>@todo: onesearch</div>
+            <div className="utk-panel--onesearch">@todo: onesearch</div>
         )
     }
 }
