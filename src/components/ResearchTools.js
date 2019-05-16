@@ -13,13 +13,15 @@ class ResearchTools extends Component {
         this.state ={
             availableOptions: DataSubjects
         }
+
+        this.updateSubject = this.updateSubject.bind(this);
     }
 
     backButton () {
         return (
             <a className="utk-collapse-research-tools"
                    onClick={this.collapseResearchTools.bind(this)}>
-            <i className="material-icons-round">cancel</i> Reset Options
+            <i className="material-icons-round">undo</i> Reset Options
             </a>
         )
 
@@ -52,6 +54,14 @@ class ResearchTools extends Component {
             status: true,
             subjectSlug: option.value,
             subjectTitle: option.text
+        });
+    }
+
+    updateSubject = (update) => {
+        this.props.guideExpanded({
+            status: true,
+            subjectSlug: update.subjectSlug,
+            subjectTitle: update.subjectTitle
         });
     }
 
@@ -105,13 +115,14 @@ class ResearchTools extends Component {
                                     <Dropdown.Item key={option.slug}
                                                    value={option.slug}
                                                    text={option.title}
-                                                   onClick={this.selectSubject.bind(option)}  />
+                                                   onClick={this.selectSubject.bind(option)} />
                                 ))}
                             </Dropdown.Menu>
                         </Dropdown.Menu>
                     </Dropdown>
                     {this.backButton(this.props.activeSubject)}
-                    <RecentlyViewed current={this.props.activeSubject}/>
+                    <RecentlyViewed current={this.props.activeSubject}
+                                    updateSubject={this.updateSubject}/>
                 </div>
             </div>
         )

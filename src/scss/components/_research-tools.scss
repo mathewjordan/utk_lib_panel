@@ -37,16 +37,30 @@
   .utk-collapse-research-tools {
     opacity: 0;
     display: inline-flex;
-    font-size: $type-2;
+    align-self: flex-start;
+    width: auto;
+    font-size: $type-1;
+    font-weight: 700;
     color: $white;
-    margin-top: $golden-ratio-4;
+    margin-top: $golden-ratio-3;
     align-items: center;
-    transition: $transition-all-fast;
+    transition: background-color 110ms ease-in-out;;
+    border: 2px solid rgba($white, 0.11);
+    border-radius: $golden-ratio-0;
+    padding: 0 $golden-ratio-1;
+    height: $golden-ratio-3;
+
+    &:hover,
+    &:focus {
+      border: none;
+      padding: 2px calc(#{$golden-ratio-1} + 2px);
+      background-color: rgba(#000, 0.29);
+    }
 
     > i {
-      font-size: 1.618em;
+      font-size: 1.382em;
       margin-right: $golden-ratio-0;
-      color: $torch;
+      color: $orange;
     }
   }
 }

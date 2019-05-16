@@ -1,0 +1,42 @@
+.utk-recently-viewed {
+  transition: $transition-all;
+  opacity: 1;
+  max-height: 100%;
+  padding-top: $golden-ratio-4;
+
+  h5 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: $type-0;
+      margin-bottom: $golden-ratio-1;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: $type-1;
+
+      a,
+      a:visited {
+        color: $eureka;
+      }
+
+      a:hover,
+      a:focus {
+        color: $eureka;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.utk-panel-focus-onesearch .utk-recently-viewed {
+  max-height: 0 !important;
+  overflow: hidden;
+  opacity: 0;
+  padding-top: 0;
+}

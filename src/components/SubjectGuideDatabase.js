@@ -11,7 +11,7 @@ class SubjectGuideDatabase extends Component {
     }
 
     componentWillMount () {
-        let that =  this;
+        let that = this;
         let timeout = that.props.instance * 110
         setTimeout(function() {
             that.setState({

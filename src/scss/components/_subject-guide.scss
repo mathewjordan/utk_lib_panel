@@ -12,18 +12,18 @@
   }
 
   > p.description {
-    color: $gray-2;
+    color: $white;
     font-size: $type-1;
 
     a,
     a:visited  {
-      color: $white;
-      text-decoration: underline;
+      color: $eureka;
     }
 
     a:hover,
     a:focus  {
-      color: $orange;
+      color: $eureka;
+      text-decoration: underline;
     }
   }
 
@@ -41,7 +41,7 @@
     h5 {
       font-size: $type-2;
       font-weight: 400;
-      color: $orange;
+      color: $summitt;
     }
 
     ul {
@@ -112,7 +112,7 @@
           > h5 {
             display: flex;
             font-size: $type-3;
-            font-weight: 400;
+            font-weight: 700;
             margin-bottom: $golden-ratio-0;
             text-transform: none;
             color: $white;

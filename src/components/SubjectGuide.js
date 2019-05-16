@@ -9,14 +9,14 @@ class SubjectGuide extends Component {
 
     componentDidUpdate() {
         const current = this.props.activeSubject
-        
+
         if (current) {
             const key = "utk_lib_panel_recent"
             const recent = JSON.parse(sessionStorage.getItem(key))
             let store = [current]
 
             if (recent)
-                store = _.concat([current], _.slice(recent, 0, 5));
+                store = _.concat([current], _.slice(recent, 0, 6));
 
             sessionStorage.setItem(key, JSON.stringify(_.uniqBy(store, 'slug')))
         }
