@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import { Dropdown, Input, Checkbox, Segment } from 'semantic-ui-react'
+import { Dropdown, Input, Checkbox } from 'semantic-ui-react'
 import _ from 'lodash';
 
-import {DataSubjects} from './DataSubjects';
+import {DataSubjects} from '../Data/DataSubjects';
 
 class ResearchTools extends Component {
 

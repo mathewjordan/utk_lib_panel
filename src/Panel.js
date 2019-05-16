@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import sample from "./media/sample2.jpg";
+import sample from "./media/sample.jpg";
 
 import OneSearch from "./components/OneSearch";
 import ResearchTools from "./components/ResearchTools";
