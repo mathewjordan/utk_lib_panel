@@ -18,7 +18,7 @@ export const DataGuide = {
                     "url": "https://libguides.utk.edu/path"
                 }
             ],
-            "data" : {
+            "assets" : {
                 "databases" : [
                     {
                         "name": "Biological Abstracts (1926-present)",

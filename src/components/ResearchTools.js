@@ -28,7 +28,7 @@ class ResearchTools extends Component {
         if (!subject)
             return 'Search by Subject'
         else
-            return subject
+            return subject.title
     }
 
     collapseResearchTools = (e) => {

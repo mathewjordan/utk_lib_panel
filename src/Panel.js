@@ -24,7 +24,10 @@ class Panel extends Component {
     if (status.status) {
       this.setState({
         panelFocus: 'research-tools',
-        activeSubject: status.subjectTitle,
+        activeSubject: {
+          title: status.subjectTitle,
+          slug: status.subjectSlug,
+        },
         guideExpanded: true
       });
     } else {
@@ -38,7 +41,7 @@ class Panel extends Component {
 
   render() {
 
-    let {panelFocus, activeSubject, guideExpanded} = this.state
+    let {panelFocus, activeSubject} = this.state
 
 
     return (
