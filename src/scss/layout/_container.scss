@@ -1,6 +1,18 @@
 #utk-panel {
-  background-color: $smokeyx;
-  color: $white;
+
+  .utk-panel-wrap {
+    transition: $transition-all;
+
+    &.utk-panel-focus-onesearch {
+      background-color: $smokey;
+      color: $white;
+    }
+
+    &.utk-panel-focus-research-tools {
+      background-color: $smokeyx;
+      color: $white;
+    }
+  }
 
   .utk-panel {
     font-size: $type-3;

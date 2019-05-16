@@ -39,9 +39,9 @@ class Panel extends Component {
     let {panelFocus, activeSubject, guideExpanded} = this.state
 
     return (
-      <div className="utk-panel-wrap">
+      <div className={`utk-panel-wrap utk-panel-focus-${panelFocus}`}>
         <div className="container utk-panel-container">
-            <div className={`utk-panel utk-panel-focus-${panelFocus}`}>
+            <div className="utk-panel">
             <OneSearch/>
             <ResearchTools activeSubject={activeSubject}
                            guideExpanded={this.guideExpanded}/>

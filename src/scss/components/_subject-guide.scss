@@ -4,6 +4,7 @@
   transition: $transition-all;
 
   > h4 {
+    font-size: $type-4;
     white-space: inherit;
   }
 
@@ -22,8 +23,93 @@
       color: $orange;
     }
   }
+
+  &--resources {
+    margin-top: $golden-ratio-3;
+
+    > div {
+      margin-top: $golden-ratio-3;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    h5 {
+      font-size: $type-1;
+      font-weight: 400;
+      color: $orange;
+      text-transform: uppercase;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      margin-bottom: $golden-ratio-2;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+    }
+
+    a,
+    a:visited  {
+      color: $white;
+    }
+
+    a:hover,
+    a:focus  {
+      color: $orange;
+    }
+  }
+
+  &--databases {
+    ul {
+      li {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $golden-ratio-1;
+        padding: $golden-ratio-1 $golden-ratio-2;
+        border-radius: $golden-ratio-1;
+        background-color: darken($smokeyx, 5);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        > a {
+          display: flex;
+          font-size: $type-2;
+          font-weight: 700;
+          margin-bottom: $golden-ratio-0;
+        }
+
+        > span {
+          line-height: 1.47em;
+          display: flex;
+          white-space: normal;
+          font-size: $type-2;
+          color: $rock;
+        }
+      }
+    }
+  }
+
+  &--journals {
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }
 }
 
 .utk-panel-focus-research-tools .utk-subject-guide {
-  height: $golden-ratio-9;
+  height: auto;
 }

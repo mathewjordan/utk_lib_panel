@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Dropdown, Input } from 'semantic-ui-react'
+import { Dropdown, Input, Checkbox, Segment } from 'semantic-ui-react'
 import _ from 'lodash';
 
 import {DataSubjects} from './DataSubjects';
@@ -18,7 +18,7 @@ class ResearchTools extends Component {
         return (
             <a className="utk-collapse-research-tools"
                    onClick={this.collapseResearchTools.bind(this)}>
-            <i className="material-icons-round">cancel</i> Back to Search
+            <i className="material-icons-round">cancel</i> Reset Options
             </a>
         )
 
@@ -109,6 +109,9 @@ class ResearchTools extends Component {
                             </Dropdown.Menu>
                         </Dropdown.Menu>
                     </Dropdown>
+                    <div className="utk-research-tools--option">
+                        Subject <Checkbox slider /> Type
+                    </div>
                     {this.backButton(this.props.activeSubject)}
                 </div>
             </div>
