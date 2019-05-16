@@ -6,11 +6,13 @@
   > h4 {
     font-size: $type-4;
     white-space: inherit;
+    font-weight: 700;
+    margin-bottom: $golden-ratio-1;
   }
 
   > p.description {
-    color: $gray-2;
-    font-size: $type-2;
+    color: $rock;
+    font-size: $type-1;
 
     a,
     a:visited  {
@@ -36,10 +38,9 @@
     }
 
     h5 {
-      font-size: $type-1;
+      font-size: $type-2;
       font-weight: 400;
       color: $orange;
-      text-transform: uppercase;
     }
 
     ul {
@@ -72,30 +73,52 @@
   &--databases {
     ul {
       li {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: $golden-ratio-1;
-        padding: $golden-ratio-1 $golden-ratio-2;
-        border-radius: $golden-ratio-1;
-        background-color: darken($smokeyx, 5);
-
         &:last-child {
           margin-bottom: 0;
         }
 
-        > a {
+        > a,
+        > a:visited {
           display: flex;
-          font-size: $type-2;
-          font-weight: 700;
-          margin-bottom: $golden-ratio-0;
-        }
+          flex-direction: column;
+          margin-bottom: $golden-ratio-1;
+          padding: $golden-ratio-1 $golden-ratio-2;
+          border-radius: $golden-ratio-1;
+          border: 2px solid $smokey;
+          transition: $transition-all-fast;
 
-        > span {
-          line-height: 1.47em;
-          display: flex;
-          white-space: normal;
-          font-size: $type-2;
-          color: $rock;
+          &:hover,
+          &:focus {
+            border-color: darken($smokeyx, 5);
+            background-color: darken($smokeyx, 5);
+
+            > h5 {
+              color: $eureka;
+            }
+
+            > span {
+              color: $white;
+            }
+          }
+
+          > h5 {
+            display: flex;
+            font-size: $type-3;
+            font-weight: 400;
+            margin-bottom: $golden-ratio-0;
+            text-transform: none;
+            color: $white;
+            transition: $transition-all-fast;
+          }
+
+          > span {
+            line-height: 1.47em;
+            display: flex;
+            white-space: normal;
+            font-size: $type-2;
+            color: $rock;
+            transition: $transition-all-fast;
+          }
         }
       }
     }

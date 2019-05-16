@@ -8,6 +8,7 @@ class SubjectGuide extends Component {
     render() {
 
         console.log(DataGuide)
+        var offset = 0;
 
         return (
             <div className="utk-panel--subject-guide">
@@ -16,18 +17,20 @@ class SubjectGuide extends Component {
                     <p className="description">Resources for <a href="#">Anatomy Table</a>, <a href="#">Biology</a> and <a href="#">Environment Studies</a>.</p>
                     <div className="utk-subject-guide--resources">
                         <div className="utk-subject-guide--databases utk-subject-guide--resource">
-                            <h5>Databases</h5>
+                            <h5>Recommended Databases</h5>
                             <ul>
                                 {DataGuide.databases.map(option => (
                                     <li>
-                                        <a href="#">{option.name}</a>
-                                        <span>{option.description}</span>
+                                        <a href="#">
+                                            <h5>{option.name}</h5>
+                                            <span>{option.description}</span>
+                                        </a>
                                     </li>
                                 ))}
                             </ul>
                         </div>
                         <div className="utk-subject-guide--journals utk-subject-guide--resource">
-                            <h5>Additional Resources</h5>
+                            <h5>Other Helpful Resources</h5>
                             <ul>
                                 {DataGuide.additional.map(option => (
                                     <li><a href="#">{option.name}</a></li>

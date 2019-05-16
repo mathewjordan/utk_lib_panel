@@ -1,10 +1,10 @@
 #utk-panel {
-
   .utk-panel-wrap {
     transition: $transition-all;
 
     &.utk-panel-focus-onesearch {
       background-color: $smokey;
+      background-image: url("../../media/sample.jpg");
       color: $white;
     }
 
