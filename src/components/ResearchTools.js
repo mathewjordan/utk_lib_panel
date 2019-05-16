@@ -109,9 +109,6 @@ class ResearchTools extends Component {
                             </Dropdown.Menu>
                         </Dropdown.Menu>
                     </Dropdown>
-                    <div className="utk-research-tools--option">
-                        Subject <Checkbox slider /> Type
-                    </div>
                     {this.backButton(this.props.activeSubject)}
                 </div>
             </div>

@@ -29,7 +29,7 @@ body {
     display: inline-flex;
     align-items: center;
     align-content: center;
-    background-color: $gray-1;
+    background-color: $gray-0;
     color: $smokeyx;
     font-weight: 700;
     border-radius: $golden-ratio-0;
@@ -55,7 +55,7 @@ body {
       right: 0;
       height: $golden-ratio-4;
       width: $golden-ratio-4;;
-      background-color: $globe !important;
+      background-color: $orange !important;
       border-radius: 0;
       border-top-right-radius: $golden-ratio-0;
       border-bottom-right-radius: $golden-ratio-0;

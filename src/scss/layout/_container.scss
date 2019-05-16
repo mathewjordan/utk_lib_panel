@@ -63,7 +63,8 @@
     }
 
     &.utk-panel-focus-onesearch {
-      height: auto;
+      background-color: $eureka;
+      color: $white;
 
       .utk-panel--onesearch {
         width: $gr-long;
@@ -76,11 +77,14 @@
 
       .utk-panel--subject-guide {
         width: $gr-long;
-        opacity: 1;
+        opacity: 0;
       }
     }
 
     &.utk-panel-focus-research-tools {
+      background-color: $valley;
+      color: $white;
+
       .utk-panel--onesearch {
         width: $gr-long;
         opacity: 0;
@@ -96,19 +100,10 @@
       }
     }
 
-    &.utk-panel-focus-onesearch {
-      background-color: $smokey;
-      color: $white;
-    }
-
-    &.utk-panel-focus-research-tools {
-      background-color: $smokeyx;
-      color: $white;
-    }
-
     > .container {
       position: relative;
       z-index: 1;
+      padding: 0 $golden-ratio-5;
     }
   }
 
@@ -124,7 +119,7 @@
 
     > div {
       display: flex;
-      transition: $transition-all;
+      transition: $transition-opacity;
     }
   }
 

@@ -8,6 +8,7 @@
     white-space: inherit;
     font-weight: 700;
     margin-bottom: $golden-ratio-1;
+    text-shadow: $box-shadow;
   }
 
   > p.description {
@@ -84,13 +85,14 @@
           margin-bottom: $golden-ratio-1;
           padding: $golden-ratio-1 $golden-ratio-2;
           border-radius: $golden-ratio-1;
-          border: 2px solid $gray-1;
-          transition: $transition-all-fast;
+          border: 2px solid rgba($white, 0.11);
+          transition: background-color 110ms ease-in-out;;
 
           &:hover,
           &:focus {
-            border-color: $smokey;
-            background-color: $smokeyx;
+            border: none;
+            padding: calc(#{$golden-ratio-1} + 2px) calc(#{$golden-ratio-2} + 2px);
+            background-color: rgba(#000, 0.29);
 
             > h5 {
               color: $eureka;
@@ -104,7 +106,7 @@
           > h5 {
             display: flex;
             font-size: $type-3;
-            font-weight: 400;
+            font-weight: 700;
             margin-bottom: $golden-ratio-0;
             text-transform: none;
             color: $white;
