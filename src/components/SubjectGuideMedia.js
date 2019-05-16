@@ -12,7 +12,7 @@ class SubjectGuideMedia extends Component {
 
     componentWillMount () {
         let that =  this;
-        let timeout = that.props.instance * 180 + 110
+        let timeout = that.props.instance * 110 + 60
         setTimeout(function() {
             that.setState({
                 delay : ""
