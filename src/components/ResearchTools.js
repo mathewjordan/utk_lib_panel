@@ -3,6 +3,7 @@ import { Dropdown, Input, Checkbox } from 'semantic-ui-react'
 import _ from 'lodash';
 
 import {DataSubjects} from '../Data/DataSubjects';
+import RecentlyViewed from "./RecentlyViewed";
 
 class ResearchTools extends Component {
 
@@ -110,6 +111,7 @@ class ResearchTools extends Component {
                         </Dropdown.Menu>
                     </Dropdown>
                     {this.backButton(this.props.activeSubject)}
+                    <RecentlyViewed current={this.props.activeSubject}/>
                 </div>
             </div>
         )

@@ -1,10 +1,24 @@
 import React, {Component} from 'react';
+import _ from 'lodash';
 
 import {DataGuide} from '../data/DataGuide'
 import SubjectGuideAssets from "./SubjectGuideAssets";
 import Error from "./Error";
 
 class SubjectGuide extends Component {
+
+    componentDidUpdate() {
+
+        const current = this.props.activeSubject
+        const key = "utk_lib_panel_recent"
+        const recent = JSON.parse(sessionStorage.getItem(key))
+        let store = [current]
+
+        if (recent)
+            store = _.concat([current], _.slice(recent, 0, 5));
+
+        sessionStorage.setItem(key, JSON.stringify(_.uniqBy(store, 'slug')))
+    }
 
     renderSubjectGuide (data, active) {
 
