@@ -2,6 +2,7 @@
   white-space: nowrap;
   height: 0;
   transition: $transition-all;
+  padding: 0;
 
   > h4 {
     font-size: $type-4;
@@ -149,4 +150,5 @@
 
 .utk-panel-focus-research-tools .utk-subject-guide {
   height: auto;
+  padding: 0 0 $golden-ratio-4;
 }
