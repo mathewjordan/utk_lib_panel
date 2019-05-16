@@ -40,7 +40,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --config ./webpack.prod.config.js --mode production && prepend dist/accordion.js '/* eslint-disable */'  && ./ship/ship-www.sh"
+    "build": "webpack --config ./webpack.prod.config.js --mode production && prepend dist/panel.js '/* eslint-disable */'  && ./ship/ship-www.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
