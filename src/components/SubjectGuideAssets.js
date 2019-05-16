@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import SubjectGuideDatabase from "./SubjectGuideDatabase";
+import SubjectGuideMedia from "./SubjectGuideMedia";
 
 class SubjectGuideAssets extends Component {
     render() {
@@ -14,21 +16,20 @@ class SubjectGuideAssets extends Component {
                     <div className="utk-subject-guide--databases utk-subject-guide--asset">
                         <h5>Recommended Databases</h5>
                         <ul>
-                            {assets.databases.map(item => (
-                                <li>
-                                    <a href={item.url}>
-                                        <h5>{item.name}</h5>
-                                        <span>{item.description}</span>
-                                    </a>
-                                </li>
+                            {assets.databases.map((item, key) => (
+                                <SubjectGuideDatabase key={key}
+                                                      instance={key}
+                                                      item={item}/>
                             ))}
                         </ul>
                     </div>
                     <div className="utk-subject-guide--journals utk-subject-guide--asset">
                         <h5>Other Helpful Resources</h5>
                         <ul>
-                            {assets.additional.map(item => (
-                                <li><a href={item.url}>{item.name}</a></li>
+                            {assets.additional.map((item, key) => (
+                                <SubjectGuideMedia key={key}
+                                                   instance={key}
+                                                   item={item}/>
                             ))}
                         </ul>
                     </div>

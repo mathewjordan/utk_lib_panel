@@ -54,9 +54,15 @@
 
 
       li {
+        &.utk-delay-render {
+          opacity: 0;
+        }
+
         margin: 0;
         padding: 0;
         list-style: none;
+        opacity: 1;
+        transition: $transition-opacity;
       }
     }
 
