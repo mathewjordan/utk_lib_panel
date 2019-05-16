@@ -1,16 +1,80 @@
 #utk-panel {
   .utk-panel-wrap {
     transition: $transition-all;
+    position: relative;
+
+    > .utk-panel-underlay {
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+
+      > img {
+        width: 100%;
+        filter: blur(11px);
+        opacity: 0.47;
+        position: absolute;
+      }
+
+      .utk-panel-underlay--fade-horz {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        $start : rgba($summitt, 0.29);
+        $start-percent : 0%;
+        $end : $smokeyx;
+        $end-percent : 100%;
+
+        background: -moz-linear-gradient(left, $start $start-percent, $end $end-percent);
+        background: -webkit-gradient(linear, left, bottom, color-stop($start-percent, $start), color-stop($end-percent, $end));
+        background: -webkit-linear-gradient(left, $start $start-percent, $end $end-percent);
+        background: -o-linear-gradient(left, $start $start-percent, $end $end-percent);
+        background: -ms-linear-gradient(left, $start $start-percent, $end $end-percent);
+        background: linear-gradient(to right, $start $start-percent, $end $end-percent);
+      }
+
+      .utk-panel-underlay--fade-vert {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        $start : rgba($smokeyx, 0.29);
+        $start-percent : calc(1% + #{$golden-ratio-5});
+        $end : $smokeyx;
+        $end-percent : calc(1% + #{$golden-ratio-9});
+
+        background: -moz-linear-gradient(top, $start $start-percent, $end $end-percent);
+        background: -webkit-gradient(linear, top, bottom, color-stop($start-percent, $start), color-stop($end-percent, $end));
+        background: -webkit-linear-gradient(top, $start $start-percent, $end $end-percent);
+        background: -o-linear-gradient(top, $start $start-percent, $end $end-percent);
+        background: -ms-linear-gradient(top, $start $start-percent, $end $end-percent);
+        background: linear-gradient(to bottom, $start $start-percent, $end $end-percent);
+      }
+    }
 
     &.utk-panel-focus-onesearch {
       background-color: $smokey;
-      background-image: url("../../media/sample.jpg");
       color: $white;
     }
 
     &.utk-panel-focus-research-tools {
       background-color: $smokeyx;
       color: $white;
+    }
+
+    > .container {
+      position: relative;
+      z-index: 1;
     }
   }
 

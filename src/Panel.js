@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import sample from "./media/sample.jpg";
+
 import OneSearch from "./components/OneSearch";
 import ResearchTools from "./components/ResearchTools";
 import SubjectGuide from "./components/SubjectGuide";
@@ -38,8 +40,14 @@ class Panel extends Component {
 
     let {panelFocus, activeSubject, guideExpanded} = this.state
 
+
     return (
       <div className={`utk-panel-wrap utk-panel-focus-${panelFocus}`}>
+        <div className="utk-panel-underlay">
+          <img src={sample} />
+          <div className="utk-panel-underlay--fade-horz"></div>
+          <div className="utk-panel-underlay--fade-vert"></div>
+        </div>
         <div className="container utk-panel-container">
             <div className="utk-panel">
             <OneSearch/>
