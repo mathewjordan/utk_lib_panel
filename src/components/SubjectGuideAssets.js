@@ -5,7 +5,7 @@ import SubjectGuideMedia from "./SubjectGuideMedia";
 class SubjectGuideAssets extends Component {
     render() {
 
-        const {title, disciplines, assets} = this.props.guide
+        const {slug, title, disciplines, assets} = this.props.guide
 
         return (
             <React.Fragment>
@@ -18,6 +18,7 @@ class SubjectGuideAssets extends Component {
                         <ul>
                             {assets.databases.map((item, key) => (
                                 <SubjectGuideDatabase key={key}
+                                                      unique={slug + key}
                                                       instance={key}
                                                       item={item}/>
                             ))}

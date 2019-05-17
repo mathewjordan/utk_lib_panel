@@ -33,7 +33,7 @@ class RecentlyViewed extends Component {
 
         let {recent} = this.state;
 
-        if (recent) {
+        if (recent && recent.length > 0) {
             return (
                 <div className="utk-recently-viewed">
                     <h5>Recently Viewed</h5>
@@ -47,6 +47,10 @@ class RecentlyViewed extends Component {
                         ))}
                     </ul>
                 </div>
+            )
+        } else if (recent && recent.length == 0) {
+            return (
+                <div className="utk-recently-viewed"></div>
             )
         } else {
             return null

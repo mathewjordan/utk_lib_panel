@@ -5,9 +5,11 @@ class SubjectGuideDatabase extends Component {
     constructor(props) {
         super(props);
 
-        this.state ={
+        this.initialState = {
             delay: 'utk-delay-render'
-        }
+        };
+
+        this.state = this.initialState;
     }
 
     componentWillMount () {
