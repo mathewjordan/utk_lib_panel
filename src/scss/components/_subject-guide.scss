@@ -23,16 +23,35 @@
       font-size: $type-2;
       font-weight: 400;
       color: $eureka;
+      cursor: pointer !important;
 
       > .text {
+        cursor: pointer !important;
+
         &:hover,
         &:focus {
           text-decoration: underline !important;
         }
       }
 
-      > .left.menu .menu {
+      &.active {
+        input {
+          padding: 0 $golden-ratio-3 !important;
+          color: $white !important;
+          font-weight: 700;
+          min-width: 200px;
+          left: auto !important;
+          right: 0 !important;
+          text-align: right;
+        }
+      }
+
+      .menu {
         margin: 0 !important;
+
+        .text {
+          font-size: $type-1 !important;
+        }
       }
 
       .icon {
