@@ -6,7 +6,7 @@ class OneSearch extends Component {
         return (
             <div className="utk-panel--onesearch">
                 <div className="utk-onesearch">
-
+                    @todo: rebuild onesearch form
                 </div>
             </div>
         )

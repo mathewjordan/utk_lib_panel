@@ -1,0 +1,52 @@
+.utk-home {
+  padding-top: $golden-ratio-4;
+  display: flex;
+
+  &--main {
+    width: $gr-long;
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      width: 50%;
+
+      > h3 {
+        font-size: $type-3;
+        color: $smokey;
+        font-weight: 400;
+      }
+
+      &:first-child {
+        padding-right: 23.5px;
+      }
+
+      &:last-child {
+        padding-left: 23.5px;
+      }
+    }
+  }
+
+  &--aside {
+    width: $gr-short;
+  }
+
+  &--hours {
+    h3 {
+      font-size: $type-3;
+      color: $smokey;
+      font-weight: 400;
+    }
+
+    > div {
+      h4 {
+        font-size: $type-2;
+        color: $smokey;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: $golden-ratio-0;
+      }
+
+      margin-bottom: $golden-ratio-2;
+    }
+  }
+}
