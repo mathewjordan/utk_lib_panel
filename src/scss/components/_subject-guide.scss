@@ -4,45 +4,110 @@
   transition: $transition-all;
   padding: 0;
 
-  > h4 {
-    font-size: $type-4;
-    white-space: inherit;
-    font-weight: 700;
+  &--header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: space-between;
     margin-bottom: $golden-ratio-1;
-    text-shadow: $box-shadow;
-  }
 
-  > p.description {
-    color: $white;
-    font-size: $type-1;
-
-    a,
-    a:visited  {
-      color: $eureka;
+    > h4 {
+      font-size: $type-4;
+      white-space: inherit;
+      font-weight: 700;
+      text-shadow: $box-shadow;
+      margin: 0;
     }
 
-    a:hover,
-    a:focus  {
+    .utk-research-guide--browse {
+      font-size: $type-2;
+      font-weight: 400;
       color: $eureka;
-      text-decoration: underline;
+
+      > .text {
+        &:hover,
+        &:focus {
+          text-decoration: underline !important;
+        }
+      }
+
+      > .left.menu .menu {
+        margin: 0 !important;
+      }
+
+      .icon {
+        margin-left: $golden-ratio-0;
+      }
     }
+
+    > p.description {
+      color: $white;
+      font-size: $type-1;
+
+      a,
+      a:visited  {
+        color: $eureka;
+      }
+
+      a:hover,
+      a:focus  {
+        color: $eureka;
+        text-decoration: underline;
+      }
+    }
+
   }
 
   &--assets {
     margin-top: $golden-ratio-3;
 
-    > div {
+    .utk-subject-guide--asset {
       margin-top: $golden-ratio-3;
+
+      &--header {
+        display: flex;
+        justify-content: space-between;
+        align-content: flex-end;
+        margin-bottom: $golden-ratio-1;
+
+        h5 {
+          font-size: $type-2;
+          font-weight: 700;
+          color: $summitt;
+          margin: 0;
+        }
+
+        > a {
+          font-weight: 700;
+          display: flex;
+          font-size: $type-1;
+          align-content: center;
+          position: relative;
+          color: $gray-1;
+          padding-right: $golden-ratio-3;
+          margin-top: -4px;
+          text-transform: uppercase;
+
+          > span {
+            position: absolute;
+            top: 4px;
+            right: 0;
+            background-color: $gray-1;
+            color: $smokeyx;
+            font-size: $type-0;
+            display: block;
+            text-align: center;
+            line-height: $golden-ratio-2;
+            padding: 0 3px;
+            height: $golden-ratio-2;
+            border-radius: $golden-ratio-0;
+          }
+        }
+      }
 
       &:first-child {
         margin-top: 0;
       }
-    }
-
-    h5 {
-      font-size: $type-2;
-      font-weight: 400;
-      color: $summitt;
     }
 
     ul {
@@ -114,7 +179,7 @@
           > h5 {
             display: flex;
             font-size: $type-3;
-            font-weight: 700;
+            font-weight: 400;
             margin-bottom: $golden-ratio-0;
             text-transform: none;
             color: $white;

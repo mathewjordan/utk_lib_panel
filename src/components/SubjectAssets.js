@@ -6,15 +6,20 @@ import SubjectGuide from "./SubjectGuide";
 class SubjectAssets extends Component {
     render() {
 
-        const {id, title, assets} = this.props.subject
+        const {id, title, assets, meta} = this.props.subject
 
         return (
             <React.Fragment>
-                <h4>{title}</h4>
-                <SubjectGuide guides={assets.guides} />
+                <div className="utk-subject-guide--header">
+                    <h4>{title}</h4>
+                    <SubjectGuide guides={assets.guides} />
+                </div>
                 <div className="utk-subject-guide--assets">
                     <div className="utk-subject-guide--databases utk-subject-guide--asset">
-                        <h5>Recommended Databases</h5>
+                        <div className="utk-subject-guide--asset--header">
+                            <h5>Recommended Databases</h5>
+                            <a>View All <span>{meta.database_count}</span></a>
+                        </div>
                         <ul>
                             {assets.databases.map((item, key) => (
                                 <SubjectDatabase key={key}
@@ -25,7 +30,9 @@ class SubjectAssets extends Component {
                         </ul>
                     </div>
                     <div className="utk-subject-guide--media utk-subject-guide--asset">
-                        <h5>Other Helpful Resources</h5>
+                        <div className="utk-subject-guide--asset--header">
+                            <h5>Other Helpful Resources</h5>
+                        </div>
                         <ul>
                             {assets.additional.map((item, key) => (
                                 <SubjectMedia key={key}

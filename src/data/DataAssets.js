@@ -1,9 +1,8 @@
-export const DataGuide = {
+export const DataAssets = {
     "subjects" : [
         {
             "id" : 39797,
             "title" : "Biological Sciences",
-            "url": "https://libguides.utk.edu/path",
             "assets" : {
                 "guides" : [
                     {
@@ -38,12 +37,14 @@ export const DataGuide = {
                         "media": "https://path.to/file.jpg"
                     }
                 ]
+            },
+            "meta" : {
+                "database_count" : 24
             }
         },
         {
             "id" : 39794,
             "title" : "Chemistry",
-            "url": "https://libguides.utk.edu/path",
             "assets" : {
                 "guides" : [
                     {
@@ -79,12 +80,14 @@ export const DataGuide = {
                         "media": "https://path.to/file.jpg"
                     }
                 ]
+            },
+            "meta" : {
+                "database_count" : 19
             }
         },
         {
             "id" : 39801,
             "title" : "English",
-            "url": "https://libguides.utk.edu/path",
             "assets" : {
                 "guides" : [
                     {
@@ -120,6 +123,9 @@ export const DataGuide = {
                         "media": "https://path.to/file.jpg"
                     }
                 ]
+            },
+            "meta" : {
+                "database_count" : 47
             }
         }
     ]

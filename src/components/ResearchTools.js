@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Dropdown, Input, Checkbox } from 'semantic-ui-react'
+import { Dropdown, Input } from 'semantic-ui-react'
 import _ from 'lodash';
 
 import {DataSubjects} from '../Data/DataSubjects';

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
 
-import {DataGuide} from '../data/DataGuide'
+import {DataAssets} from '../data/DataAssets'
 import SubjectAssets from "./SubjectAssets";
 import Error from "./Error";
 
@@ -43,7 +43,7 @@ class Subject extends Component {
         return (
             <div className="utk-panel--subject-guide">
                 <div className={`utk-subject-guide`}>
-                    {this.renderSubject(DataGuide, this.props.activeSubject)}
+                    {this.renderSubject(DataAssets, this.props.activeSubject)}
                 </div>
             </div>
         )
