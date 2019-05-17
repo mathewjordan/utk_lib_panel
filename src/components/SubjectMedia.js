@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class SubjectGuideMedia extends Component {
+class SubjectMedia extends Component {
 
     constructor(props) {
         super(props);
@@ -34,4 +34,4 @@ class SubjectGuideMedia extends Component {
     }
 }
 
-export default SubjectGuideMedia;
+export default SubjectMedia;

@@ -14,7 +14,7 @@ class RecentlyViewed extends Component {
     updateSubject = (item, e) => {
         this.props.updateSubject({
             status: true,
-            subjectSlug: item.slug,
+            subjectID: item.id,
             subjectTitle: item.title
         });
     }
@@ -40,7 +40,7 @@ class RecentlyViewed extends Component {
                     <ul>
                         {recent.map((item) => (
                             <li>
-                                <a data-slug={item.slug}
+                                <a data-id={item.id}
                                    data-title={item.title}
                                    onClick={() => this.updateSubject(item)} >{item.title}</a>
                             </li>

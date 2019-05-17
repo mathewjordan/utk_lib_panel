@@ -4,7 +4,7 @@ import sample from "./media/sample.jpg";
 
 import OneSearch from "./components/OneSearch";
 import ResearchTools from "./components/ResearchTools";
-import SubjectGuide from "./components/SubjectGuide";
+import Subject from "./components/Subject";
 
 class Panel extends Component {
 
@@ -26,7 +26,7 @@ class Panel extends Component {
         panelFocus: 'research-tools',
         activeSubject: {
           title: status.subjectTitle,
-          slug: status.subjectSlug,
+          id: status.subjectID,
         },
         guideExpanded: true
       });
@@ -56,7 +56,7 @@ class Panel extends Component {
             <OneSearch/>
             <ResearchTools activeSubject={activeSubject}
                            guideExpanded={this.guideExpanded}/>
-            <SubjectGuide activeSubject={activeSubject}/>
+            <Subject activeSubject={activeSubject}/>
           </div>
         </div>
       </div>

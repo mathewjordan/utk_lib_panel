@@ -40,7 +40,7 @@ class ResearchTools extends Component {
 
         this.props.guideExpanded({
             status: false,
-            subjectSlug: null,
+            subjectID: null,
             subjectTitle: null
         });
     }
@@ -52,7 +52,7 @@ class ResearchTools extends Component {
 
         this.props.guideExpanded({
             status: true,
-            subjectSlug: option.value,
+            subjectID: option.value,
             subjectTitle: option.text
         });
     }
@@ -60,7 +60,7 @@ class ResearchTools extends Component {
     updateSubject = (update) => {
         this.props.guideExpanded({
             status: true,
-            subjectSlug: update.subjectSlug,
+            subjectID: update.subjectID,
             subjectTitle: update.subjectTitle
         });
     }
@@ -112,8 +112,8 @@ class ResearchTools extends Component {
                                    onClick={this.onInputFocus} />
                             <Dropdown.Menu scrolling>
                                 {this.state.availableOptions.map(option => (
-                                    <Dropdown.Item key={option.slug}
-                                                   value={option.slug}
+                                    <Dropdown.Item key={option.id}
+                                                   value={option.id}
                                                    text={option.title}
                                                    onClick={this.selectSubject.bind(option)} />
                                 ))}

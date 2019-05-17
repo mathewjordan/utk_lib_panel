@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class SubjectGuideDatabase extends Component {
+class SubjectDatabase extends Component {
 
     constructor(props) {
         super(props);
@@ -37,4 +37,4 @@ class SubjectGuideDatabase extends Component {
     }
 }
 
-export default SubjectGuideDatabase;
+export default SubjectDatabase;
