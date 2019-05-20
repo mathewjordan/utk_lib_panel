@@ -9,6 +9,7 @@
 
     > div {
       width: 50%;
+      margin-bottom: $golden-ratio-4;
 
       > h3 {
         font-size: $type-3;
@@ -16,11 +17,11 @@
         font-weight: 400;
       }
 
-      &:first-child {
+      &:nth-child(odd) {
         padding-right: 23.5px;
       }
 
-      &:last-child {
+      &:nth-child(even) {
         padding-left: 23.5px;
       }
     }
@@ -31,6 +32,12 @@
   }
 
   &--hours {
+    background-color: $gray-1;
+    padding: $golden-ratio-3;
+    position: relative;
+    margin-top: -$golden-ratio-5;
+    border-radius: $golden-ratio-0;
+
     h3 {
       font-size: $type-3;
       color: $smokey;

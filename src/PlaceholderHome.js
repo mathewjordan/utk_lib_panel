@@ -44,6 +44,11 @@ class PlaceholderHome extends Component {
                                         <Placeholder.Line />
                                         <Placeholder.Line />
                                     </Placeholder.Header>
+                                    <Placeholder.Paragraph>
+                                        <Placeholder.Line length='medium' />
+                                        <Placeholder.Line length='short'/>
+                                        <Placeholder.Line length='long' />
+                                    </Placeholder.Paragraph>
                                 </Placeholder>
                             </div>
                             <div>
