@@ -81,14 +81,11 @@ class Subject extends Component {
         return null
     }
 
-    renderSubject (data, active) {
-        if (active) {
-            const subject = data.subjects[_.findIndex(data.subjects, {
-                'id': active.id
-            })]
-
-            if (subject)
-                return <SubjectAssets subject={subject} />
+    renderSubject = (data) => {
+        if (data) {
+            if (data)
+                return <SubjectAssets subjectHeader={this.props.activeSubject}
+                                      subjectData={data} />
 
             else
                 return <Error />
@@ -104,7 +101,7 @@ class Subject extends Component {
         return (
             <div className="utk-panel--subject-guide">
                 <div className={`utk-subject-guide`}>
-                    {/*{this.renderSubject(DataAssets, this.props.activeSubject)}*/}
+                    {this.renderSubject(this.state.data)}
                 </div>
             </div>
         )
