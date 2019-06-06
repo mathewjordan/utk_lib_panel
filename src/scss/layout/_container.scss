@@ -14,7 +14,7 @@
 
       > img {
         width: 100%;
-        filter: blur(6px);
+        filter: blur(18px);
         opacity: 0.47;
         position: absolute;
         transition: $transition-all;
@@ -29,7 +29,7 @@
         height: 100%;
         z-index: 1;
 
-        $start : rgba($summitt, 0.47);
+        $start : rgba($fountain, 0.29);
         $start-percent : 0%;
         $end : $smokeyx;
         $end-percent : 61.8%;
@@ -50,7 +50,7 @@
         height: 100%;
         z-index: 1;
 
-        $start : rgba($valley, 0.18);
+        $start : rgba($fountain, 0.18);
         $start-percent : 0;
         $end : $smokeyx;
         $end-percent : 400px;
@@ -65,7 +65,7 @@
     }
 
     &.utk-panel-focus-onesearch {
-      background-color: $eureka;
+      background-color: $fountain;
       color: $white;
 
       .utk-panel--onesearch {
@@ -84,12 +84,11 @@
     }
 
     &.utk-panel-focus-research-tools {
-      background-color: $valley;
       color: $white;
+      background-color: $fountain;
 
       > .utk-panel-underlay > img {
         transform: scale(1.11,1.11);
-        opacity: 0.76;
       }
 
       .utk-panel--onesearch {
