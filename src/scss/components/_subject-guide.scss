@@ -4,6 +4,7 @@
   transition: $transition-all;
   padding: 0;
   width: 100%;
+  padding-right: 15px;
 
   &--header {
     display: flex;
@@ -79,49 +80,39 @@
   }
 
   &--assets {
-    margin-top: $golden-ratio-3;
+    margin-top: $golden-ratio-2;
 
     .utk-subject-guide--asset {
-      margin-top: $golden-ratio-3;
 
       &--header {
         display: flex;
         justify-content: space-between;
-        align-content: flex-end;
+        align-items: center;
         margin-bottom: $golden-ratio-1;
 
         h5 {
-          font-size: $type-2;
+          font-size: $type-1;
           font-weight: 700;
-          color: $summitt;
+          text-transform: uppercase;
+          color: white;
           margin: 0;
         }
 
-        > a {
-          font-weight: 700;
+        > a,
+        > a:visited {
+          font-weight: 400;
           display: flex;
           font-size: $type-1;
           align-content: center;
           position: relative;
-          color: $gray-1;
-          padding-right: $golden-ratio-3;
+          color: $eureka;
           margin-top: -4px;
-          text-transform: uppercase;
+        }
 
-          > span {
-            position: absolute;
-            top: 4px;
-            right: 0;
-            background-color: $gray-1;
-            color: $smokeyx;
-            font-size: $type-0;
-            display: block;
-            text-align: center;
-            line-height: $golden-ratio-2;
-            padding: 0 3px;
-            height: $golden-ratio-2;
-            border-radius: $golden-ratio-0;
-          }
+        > a:hover,
+        > a:focus {
+          color: $eureka;
+          text-decoration: underline;
         }
       }
 

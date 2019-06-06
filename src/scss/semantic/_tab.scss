@@ -1,0 +1,39 @@
+.utk-subject-guide {
+  .ui.secondary.menu {
+    margin-bottom: $golden-ratio-3;
+
+    a.item {
+      color: $eureka;
+      font-size: $type-2;
+      font-family: $sans !important;
+      align-self: flex-start;
+      height: $golden-ratio-4;
+      padding: 0 $golden-ratio-2;
+
+      &.active {
+        background-color: rgba($fountain, 0.18);
+        color: $white;
+        font-weight: 700;
+      }
+
+      .ui.label {
+        background-color: transparent;
+        font-size: $type-1;
+        width: $golden-ratio-2;
+        height: $golden-ratio-2;
+        line-height: $golden-ratio-2;
+        padding: 0;
+        text-align: center;
+        border-radius: $golden-ratio-2;
+        color: $summitt;
+      }
+    }
+  }
+
+  .ui.segment.active.tab {
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+}
