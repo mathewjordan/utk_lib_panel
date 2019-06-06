@@ -1,0 +1,19 @@
+body .ui.labeled.icon.button {
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  background-color: #f6f6f6;
+  color: #333;
+  font-weight: 700;
+  border-radius: 6px;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  font-size: 15px;
+  white-space: nowrap;
+  height: 47px;
+  padding: 0 calc(65px) 0 18px !important;
+  box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29);
+  width: calc(100% / 1.61803);
+  max-width: 100%;
+  transition: all 110ms ease-in-out;
+}

@@ -5,25 +5,83 @@ import {DataAssets} from '../data/DataAssets'
 import SubjectAssets from "./SubjectAssets";
 import Error from "./Error";
 
+const libGuidesEndpoint = 'https://libguides.herokuapp.com/';
+
 class Subject extends Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state ={
+            data: null
+        }
+    }
+
     componentDidUpdate() {
+        let {data, id} = this.state;
         const current = this.props.activeSubject
 
         if (current) {
             const key = "utk_lib_panel_recent"
             const recent = JSON.parse(sessionStorage.getItem(key))
-            let store = [current]
 
-            if (recent)
-                store = _.concat([current], _.slice(recent, 0, 6));
+            if (data === null || id !== current.id) {
 
-            sessionStorage.setItem(key, JSON.stringify(_.uniqBy(store, 'id')))
+                /*
+                 * checks session storage for modern browser stored data.
+                 * gets local data if exists, else fetches from endpoint.
+                 */
+
+                if (_.some(recent, ['id', current.id]))
+                    this.getSessionData(recent, current.id)
+
+                else
+                    this.fetchSubjectData(current.id)
+
+            } else {
+                current.libguides = data
+                let store = [current]
+
+                if (recent)
+                    store = _.concat([current], recent)
+
+                sessionStorage.setItem(key, JSON.stringify(_.uniqBy(store, 'id')))
+            }
         }
     }
 
-    renderSubject (data, active) {
+    getSessionData (recent, id) {
+        let localData = _.find(recent, { 'id': id})
 
+        this.setState({
+            data: localData.libguides,
+            id: id
+        });
+
+        return null
+    }
+
+    fetchSubjectData (id) {
+
+        fetch(libGuidesEndpoint + id, {
+            headers : {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
+                    data: data,
+                    id: id
+                });
+            })
+            .catch(err => console.error(this.props.url, err.toString()));
+
+        return null
+    }
+
+    renderSubject (data, active) {
         if (active) {
             const subject = data.subjects[_.findIndex(data.subjects, {
                 'id': active.id
@@ -31,10 +89,13 @@ class Subject extends Component {
 
             if (subject)
                 return <SubjectAssets subject={subject} />
+
             else
                 return <Error />
+
         } else {
             return null
+
         }
     }
 
@@ -43,7 +104,7 @@ class Subject extends Component {
         return (
             <div className="utk-panel--subject-guide">
                 <div className={`utk-subject-guide`}>
-                    {this.renderSubject(DataAssets, this.props.activeSubject)}
+                    {/*{this.renderSubject(DataAssets, this.props.activeSubject)}*/}
                 </div>
             </div>
         )
