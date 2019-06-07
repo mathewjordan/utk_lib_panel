@@ -12,20 +12,22 @@ class SubjectAssets extends Component {
 
         this.state ={
             id: this.props.subjectHeader.id,
-            build: false,
-            databases: []
+            buildDatabase: false,
+            buildGuides: false,
+            paneDatabase: [],
+            paneGuides: []
         }
     }
 
     componentWillReceiveProps() {
         this.setState({
-            build: false
+            buildDatabase: false
         });
     }
 
     buildDatabasePane (data, id) {
 
-        let build = this.state.build;
+        let build = this.state.buildDatabase;
 
         if (data.featured_databases.length !== 0 && build === false) {
 
@@ -55,10 +57,14 @@ class SubjectAssets extends Component {
 
             this.setState({
                 id: id,
-                build: true,
-                databases: panes
+                buildDatabase: true,
+                paneDatabase: panes
             });
         }
+    }
+
+    buildGuidesPane (data, id) {
+
     }
 
     render() {
@@ -67,6 +73,7 @@ class SubjectAssets extends Component {
         const {subjectData} = this.props
 
         this.buildDatabasePane(subjectData, id)
+        this.buildGuidesPane(subjectData, id)
 
         return (
             <div className={`utk-subject-guide`} data-subject-id={id}>
@@ -74,7 +81,7 @@ class SubjectAssets extends Component {
                     <h4>{title}</h4>
                 </div>
                 <Tab menu={{ secondary: true }}
-                     panes={this.state.databases}
+                     panes={this.state.paneDatabase}
                      className="utk-subject-guide--assets" />
             </div>
         )
