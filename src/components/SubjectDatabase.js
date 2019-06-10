@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+const Entities = require('html-entities').AllHtmlEntities;
+
 class SubjectDatabase extends Component {
 
     constructor(props) {
@@ -25,13 +27,14 @@ class SubjectDatabase extends Component {
     render() {
 
         const {item} = this.props
+        const entities = new Entities();
 
         return (
             <li className={this.state.delay}>
                 <a href={item.url}>
                     <h5>{item.name}</h5>
-                    <span>{item.description}</span>
                 </a>
+                <div dangerouslySetInnerHTML={{__html: entities.decode(item.description)}} />
             </li>
         )
     }
