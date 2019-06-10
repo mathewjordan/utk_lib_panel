@@ -32,7 +32,6 @@ body .ui.labeled.icon.button>.icon,
 body .ui.labeled.icon.buttons>.button>.icon {
   position: absolute;
   height: 100%;
-  line-height: 1;
   border-radius: 0;
   border-top-left-radius: inherit;
   border-bottom-left-radius: inherit;
@@ -43,6 +42,7 @@ body .ui.labeled.icon.buttons>.button>.icon {
   color: '';
   -webkit-box-shadow: -1px 0 0 0 transparent inset;
   box-shadow: -1px 0 0 0 transparent inset;
+  line-height: 45px;
 }
 
 body .utk-research-tools {

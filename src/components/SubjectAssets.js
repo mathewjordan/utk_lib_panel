@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import { Tab, Menu, Label } from 'semantic-ui-react'
 
 import SubjectDatabase from "./SubjectDatabase";
-import SubjectMedia from "./SubjectMedia";
 import SubjectGuide from "./SubjectGuide";
 
 class SubjectAssets extends Component {
@@ -12,62 +11,133 @@ class SubjectAssets extends Component {
 
         this.state ={
             id: this.props.subjectHeader.id,
+            renderedId: null,
+            update: false,
             buildDatabase: false,
             buildGuides: false,
-            paneDatabase: [],
-            paneGuides: []
+            databasePanes: [],
+            guidePanes: []
         }
     }
 
-    componentWillReceiveProps() {
+    updateState = () => {
         this.setState({
-            buildDatabase: false
+            buildDatabase: false,
+            buildGuides: false,
+            update: false
         });
+    }
+
+    componentDidMount() {
+        this.setState({
+            renderedId: this.props.subjectHeader.id
+        });
+    }
+
+    componentWillReceiveProps() {
+        this.updateState()
     }
 
     buildDatabasePane (data, id) {
 
-        let build = this.state.buildDatabase;
+        const build = this.state.buildDatabase;
 
         if (data.featured_databases.length !== 0 && build === false) {
 
-            let panes = [
+            console.log('update here...')
+
+            let databasePanes =
                 {
                     menuItem: (
-                        <Menu.Item key='messages'>
+                        <Menu.Item key='messages' onClick={this.updateState}>
                             Databases<Label>{data.total_databases}</Label>
                         </Menu.Item>
                     ),
-                    render: () => <Tab.Pane attached={false}><div className="utk-subject-guide--databases utk-subject-guide--asset">
-                        <div className="utk-subject-guide--asset--header">
-                            <h5>Recommended Databases</h5>
-                            <a>View All Databases <span className='icon-open-right'></span></a>
-                        </div>
-                        <ul>
-                            {data.featured_databases.map((item, key) => (
-                                <SubjectDatabase key={key}
-                                                 unique={id + '-' +  key}
-                                                 instance={key}
-                                                 item={item}/>
-                            ))}
-                        </ul>
-                    </div></Tab.Pane>
-                    }
-                ]
+                    render: () =>
+                        <Tab.Pane attached={false}>
+                            <div className="utk-subject-guide--databases utk-subject-guide--asset">
+                                <div className="utk-subject-guide--asset--header">
+                                    <h5>Recommended Databases</h5>
+                                    <a>View All Databases <span className='icon-open-right'></span></a>
+                                </div>
+                                <ul>
+                                    {data.featured_databases.map((item, key) => (
+                                        <SubjectDatabase key={key}
+                                                         unique={id + '-' +  key}
+                                                         instance={key}
+                                                         item={item}/>
+                                    ))}
+                                </ul>
+                            </div>
+                        </Tab.Pane>
+                }
 
             this.setState({
-                id: id,
+                renderedId: id,
                 buildDatabase: true,
-                paneDatabase: panes
+                databasePanes: databasePanes
+            });
+
+        } else if (data.featured_databases.length === 0 && build === false) {
+            this.setState({
+                renderedId: id,
+                buildDatabase: true,
+                databasePanes: {}
             });
         }
     }
 
     buildGuidesPane (data, id) {
 
+        const build = this.state.buildGuides;
+
+        if (data.associated_libguides.length !== 0 && build === false) {
+
+            let guidePanes =
+                {
+                    menuItem: (
+                        <Menu.Item key='messages'>
+                            Research Guides<Label>{data.associated_libguides.length}</Label>
+                        </Menu.Item>
+                    ),
+                    render: () =>
+                        <Tab.Pane attached={false}>
+                            <div className="utk-subject-guide--guides utk-subject-guide--asset">
+                            <div className="utk-subject-guide--asset--header">
+                                <h5>Research Guides</h5>
+                            </div>
+                            <ul>
+                                {data.associated_libguides.map((item, key) => (
+                                    <SubjectGuide key={key}
+                                                  unique={id + '-' +  key}
+                                                  instance={key}
+                                                  item={item}/>
+                                ))}
+                            </ul>
+                        </div>
+                        </Tab.Pane>
+                }
+
+
+            this.setState({
+                renderedId: id,
+                buildGuides: true,
+                guidePanes: guidePanes
+            });
+
+        } else if (data.associated_libguides.length === 0 && build === false) {
+            this.setState({
+                renderedId: id,
+                buildDatabase: true,
+                databasePanes: {}
+            });
+        }
+
     }
 
     render() {
+
+        console.log('something')
 
         const {id, title} = this.props.subjectHeader
         const {subjectData} = this.props
@@ -81,7 +151,8 @@ class SubjectAssets extends Component {
                     <h4>{title}</h4>
                 </div>
                 <Tab menu={{ secondary: true }}
-                     panes={this.state.paneDatabase}
+                     defaultActiveIndex={0}
+                     panes={[this.state.databasePanes, this.state.guidePanes]}
                      className="utk-subject-guide--assets" />
             </div>
         )

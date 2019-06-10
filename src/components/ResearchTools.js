@@ -97,7 +97,7 @@ class ResearchTools extends Component {
                     <h3>Find Research Tools</h3>
                     <Dropdown
                         text={this.dropdownText(this.props.activeSubject)}
-                        icon='angle down'
+                        icon='icon-down-open'
                         floating
                         labeled
                         button

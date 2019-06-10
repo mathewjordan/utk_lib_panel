@@ -1,36 +1,38 @@
 import React, {Component} from 'react';
-import { Dropdown, Input } from 'semantic-ui-react'
 
 class SubjectGuide extends Component {
 
+    constructor(props) {
+        super(props);
+
+        this.initialState = {
+            delay: 'utk-delay-render'
+        };
+
+        this.state = this.initialState;
+    }
+
+    componentWillMount () {
+        let that = this;
+        let timeout = that.props.instance * 60
+        setTimeout(function() {
+            that.setState({
+                delay : ""
+            });
+        }, timeout);
+    }
+
     render() {
 
-        const {guides} = this.props
+        const {item} = this.props
 
-        const options = guides.map((item, key) => (
-            {
-                key: key,
-                text: item.name,
-                value: item.url
-            }
-        ))
-
-        if (guides) {
-            return (
-                <React.Fragment>
-                    <Dropdown
-                        text='Find Research Guides'
-                        direction='left'
-                        options={options}
-                        className='icon utk-research-guide--browse'
-                    >
-                    </Dropdown>
-                </React.Fragment>
-            )
-        } else {
-            return null
-        }
-
+        return (
+            <li className={this.state.delay}>
+                <a href={item.url}>
+                    <h5>{item.name}</h5>
+                </a>
+            </li>
+        )
     }
 }
 
