@@ -21,7 +21,7 @@ class ResearchTools extends Component {
         return (
             <a className="utk-collapse-research-tools"
                    onClick={this.collapseResearchTools.bind(this)}>
-            <i className="material-icons-round">undo</i> Reset Options
+            <span className="icon-left-big"></span> Reset Options
             </a>
         )
 
