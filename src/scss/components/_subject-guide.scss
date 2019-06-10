@@ -14,10 +14,12 @@
     margin-bottom: $golden-ratio-1;
 
     > h4 {
+      color: $white !important;
       font-size: $type-4;
       white-space: inherit;
       font-weight: 400;
       text-shadow: $box-shadow;
+      text-transform: none !important;
       margin: 0;
     }
 

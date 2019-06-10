@@ -5,10 +5,11 @@
   padding: $golden-ratio-4 0;
 
   h5 {
+    color: $white !important;
     text-transform: uppercase;
     margin-bottom: 0;
     font-size: $type-1;
-      margin-bottom: $golden-ratio-1;
+    margin-bottom: $golden-ratio-1;
   }
 
   ul {

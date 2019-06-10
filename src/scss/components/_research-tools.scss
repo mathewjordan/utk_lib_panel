@@ -11,6 +11,7 @@
     transition: $transition-all;
     text-shadow: $box-shadow;
     margin-top: 0;
+    color: $white !important;
   }
 
   &--option {
@@ -58,8 +59,7 @@
       background-color: rgba(#000, 0.29);
     }
 
-    > i {
-      font-size: 1.382em;
+    > span {
       margin-right: $golden-ratio-0;
       color: $orange;
     }
