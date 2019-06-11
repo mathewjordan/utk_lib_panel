@@ -1,0 +1,16 @@
+.utk-search {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-size: $type-3;
+    font-weight: 400;
+    margin-bottom: $type-3;
+    transition: $transition-all;
+    text-shadow: $box-shadow;
+    margin-top: 0;
+    color: $white !important;
+  }
+}

@@ -29,7 +29,7 @@ class ResearchTools extends Component {
 
     dropdownText (subject) {
         if (!subject)
-            return 'Search by Subject'
+            return 'Filter by Subject'
         else
             return subject.title
     }

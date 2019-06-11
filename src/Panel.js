@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import sample from "./media/sample.jpg";
 
-import OneSearch from "./components/OneSearch";
+import Search from "./components/Search";
 import ResearchTools from "./components/ResearchTools";
 import Subject from "./components/Subject";
 
@@ -12,7 +12,7 @@ class Panel extends Component {
     super(props);
 
     this.state ={
-      panelFocus: 'onesearch',
+      panelFocus: 'search',
       activeSubject: null,
       guideExpanded: false
     }
@@ -32,7 +32,7 @@ class Panel extends Component {
       });
     } else {
       this.setState({
-        panelFocus: 'onesearch',
+        panelFocus: 'search',
         activeSubject: null,
         guideExpanded: false
       });
@@ -53,7 +53,7 @@ class Panel extends Component {
         </div>
         <div className="container utk-panel-container">
             <div className="utk-panel">
-            <OneSearch/>
+            <Search/>
             <ResearchTools activeSubject={activeSubject}
                            guideExpanded={this.guideExpanded}/>
             <Subject activeSubject={activeSubject}/>
