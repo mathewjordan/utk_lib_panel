@@ -71,15 +71,21 @@
       .utk-panel--search {
         width: $gr-long;
         opacity: 1;
+        padding-right: 0;
+        padding-left: $golden-ratio-4;
       }
 
       .utk-panel--research-tools {
         width: $gr-short;
+        padding-right: $golden-ratio-4;
+        padding-left: 0;
       }
 
       .utk-panel--subject-guide {
         width: $gr-long;
         opacity: 0;
+        padding-right: 0;
+        padding-left: 0;
       }
     }
 
@@ -94,16 +100,21 @@
       .utk-panel--search {
         width: $gr-long;
         opacity: 0;
+        padding-right: 0;
+        padding-left: 0;
       }
 
       .utk-panel--research-tools {
         width: $gr-short;
+        padding-right: 0;
         padding-left: $golden-ratio-4;
       }
 
       .utk-panel--subject-guide {
         width: $gr-long;
         opacity: 1;
+        padding-right: $golden-ratio-4;
+        padding-left: 0;
       }
     }
 
@@ -115,7 +126,7 @@
 
   .utk-panel {
     font-size: $type-3;
-    padding: $golden-ratio-6 $golden-ratio-4 $golden-ratio-2;
+    padding: $golden-ratio-6 0 $golden-ratio-2;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
