@@ -59,6 +59,7 @@
     transition: width .1s ease,-webkit-box-shadow .1s ease;
     transition: box-shadow .1s ease,width .1s ease;
     transition: box-shadow .1s ease,width .1s ease,-webkit-box-shadow .1s ease;
+    position: relative;
   }
 
   .ui.selection.dropdown .menu {
@@ -133,5 +134,4 @@
     display: block!important;
     visibility: visible!important;
   }
-
 }

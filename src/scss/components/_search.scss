@@ -87,7 +87,7 @@
 
       .ui.selection.dropdown {
         height: $golden-ratio-4;
-        font-size: $type-2;
+        font-size: $type-1;
         padding-top: 0;
         padding-bottom: 0;
         display: flex;
@@ -96,6 +96,31 @@
         border-right: 2px solid $gray-0;
         background-color: $white;
         color: $smokeyx;
+        padding-right: 33px;
+        position: relative;
+
+        .menu {
+          font-size: $type-1;
+          border: none;
+          box-shadow: $box-shadow-float;
+
+          > .item {
+            font-size: $type-1;
+            cursor: pointer;
+          }
+        }
+
+        &::before {
+          position: absolute;
+          right: 11px;
+          top: 17px;
+          font-size: $type-0;
+          color: $gray-3;
+        }
+
+        &.active::before {
+          color: $smokey !important;
+        }
 
         > .text {
           align-self: center;

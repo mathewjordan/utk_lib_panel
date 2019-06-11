@@ -40,7 +40,9 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --config ./webpack.prod.config.js --mode production && prepend dist/panel.js '/* eslint-disable */'  && ./ship/ship-www.sh"
+    "build": "webpack --config ./webpack.prod.config.js --mode production && prepend dist/panel.js '/* eslint-disable */' && npm run build-www-set-absolutes-js && npm run build-www-set-absolutes-css && ./ship/ship-www.sh",
+    "build-www-set-absolutes-js": "replace 'dist[/]' '/wp-content/themes/utk_lib_wp_theme/resources/assets/react/panel/' dist/*.js",
+    "build-www-set-absolutes-css": "replace '[/]dist[/]' '/wp-content/themes/utk_lib_wp_theme/resources/assets/react/panel/' dist/*.css"
   },
   "eslintConfig": {
     "extends": "react-app"

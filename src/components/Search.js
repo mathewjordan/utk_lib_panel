@@ -13,6 +13,8 @@ class Search extends Component {
                            action>
                         <input />
                         <Select compact
+                                icon
+                                className="icon-down-open"
                                 options={onesearchOptions}
                                 defaultValue='onesearch' />
                         <Button type='submit'>Submit</Button>
@@ -32,7 +34,7 @@ class Search extends Component {
         ]
 
         const onesearchOptions = [
-            { key: 'onesearch', text: 'Catalog', value: 'onesearch' },
+            { key: 'onesearch', text: 'One Search', value: 'onesearch' },
             { key: 'ut-collections', text: 'UT Collections', value: 'ut-collections' },
             { key: 'course-reviews', text: 'Course Reviews', value: 'course-reviews' },
         ]
