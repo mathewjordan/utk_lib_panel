@@ -14,28 +14,6 @@
     color: $white !important;
   }
 
-  &--option {
-    margin-top: $golden-ratio-3;
-    display: flex;
-    align-items: center;
-    font-size: $type-2;
-    padding: 0 $golden-ratio-2;
-
-    .ui.slider.checkbox {
-      margin: 0 $golden-ratio-1;
-
-      label {
-        &::before {
-          background-color: $rock !important;
-        }
-
-        &::after {
-          background-color: $gray-1;
-        }
-      }
-    }
-  }
-
   .utk-collapse-research-tools {
     opacity: 0;
     display: inline-flex;
