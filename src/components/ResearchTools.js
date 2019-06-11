@@ -94,7 +94,7 @@ class ResearchTools extends Component {
         return (
             <div className="utk-panel--research-tools">
                 <div className="utk-research-tools">
-                    <h3>Find Research Tools</h3>
+                    <h3>Research Tools</h3>
                     <Dropdown
                         text={this.dropdownText(this.props.activeSubject)}
                         icon='icon-down-open'

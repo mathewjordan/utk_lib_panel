@@ -16,10 +16,12 @@
 
   .utk-search-tabs {
     padding-right: $golden-ratio-5;
+    transition: $transition-all-fast;
+    opacity: 1;
 
     > .ui.menu {
       &::before {
-        content: 'Search Libraries';
+        content: 'Search';
         font-size: $type-4;
         font-weight: 400;
         transition: $transition-all;
@@ -140,4 +142,8 @@
       }
     }
   }
+}
+
+.utk-panel-focus-research-tools .utk-search-tabs {
+  opacity: 0 !important;
 }
