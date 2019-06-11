@@ -72,14 +72,13 @@
         width: $gr-long;
         opacity: 1;
         padding-right: 0;
-        padding-left: $golden-ratio-4;
+        //padding-left: $golden-ratio-4;
         transition: $transition-all;
-        overflow: hidden;
       }
 
       .utk-panel--research-tools {
         width: $gr-short;
-        padding-right: $golden-ratio-4;
+        //padding-right: $golden-ratio-4;
         padding-left: 0;
         transition: $transition-all;
       }
@@ -90,7 +89,6 @@
         padding-right: 0;
         padding-left: 0;
         transition: $transition-all;
-        overflow: hidden;
       }
     }
 
@@ -108,23 +106,21 @@
         padding-right: 0;
         padding-left: 0;
         transition: $transition-all;
-        overflow: hidden;
       }
 
       .utk-panel--research-tools {
         width: $gr-short;
         padding-right: 0;
-        padding-left: $golden-ratio-4;
+        //padding-left: $golden-ratio-4;
         transition: $transition-all;
       }
 
       .utk-panel--subject-guide {
         width: $gr-long;
         opacity: 1;
-        padding-right: $golden-ratio-4;
+        //padding-right: $golden-ratio-4;
         padding-left: 0;
         transition: $transition-all;
-        overflow: hidden;
       }
     }
 
