@@ -19,7 +19,7 @@ class Search extends Component {
                     </Input>
                 </Tab.Pane>
             },
-            { menuItem: 'lib.utk.edu', render: () =>
+            { menuItem: 'Search lib.utk.edu', render: () =>
                 <Tab.Pane attached={false}>
                     <Input type='text'
                            placeholder='Find hours, services, and more...'
@@ -32,7 +32,7 @@ class Search extends Component {
         ]
 
         const onesearchOptions = [
-            { key: 'onesearch', text: 'One Search', value: 'onesearch' },
+            { key: 'onesearch', text: 'Catalog', value: 'onesearch' },
             { key: 'ut-collections', text: 'UT Collections', value: 'ut-collections' },
             { key: 'course-reviews', text: 'Course Reviews', value: 'course-reviews' },
         ]
@@ -40,8 +40,7 @@ class Search extends Component {
         return (
             <div className="utk-panel--search">
                 <div className="utk-search">
-                    <h3>Search University Libraries</h3>
-                    <Tab menu={{ secondary: true }} panes={panes} />
+                    <Tab menu={{ text: true }} panes={panes} className="utk-search-tabs" />
                 </div>
             </div>
         )
