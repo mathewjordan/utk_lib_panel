@@ -2,6 +2,7 @@
   .utk-panel-wrap {
     transition: $transition-all;
     position: relative;
+    z-index: 1020;
 
     > .utk-panel-underlay {
       position: absolute;
