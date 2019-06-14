@@ -20,23 +20,12 @@
     opacity: 1;
 
     > .ui.menu {
-      &::before {
-        content: 'Search';
-        font-size: $type-4;
-        font-weight: 400;
-        transition: $transition-all;
-        text-shadow: $box-shadow;
-        margin-top: 0;
-        color: $white !important;
-        margin-right: $golden-ratio-4;
-      }
-
-      margin-bottom: $golden-ratio-2;
+      margin-bottom: 22px;
 
       a,
       a:visited {
         color: $summitt !important;
-        font-size: $type-3;
+        font-size: $type-4;
         white-space: inherit;
         font-weight: 400;
         text-shadow: $box-shadow;
@@ -45,7 +34,6 @@
         cursor: pointer;
         padding: 0 0;
         margin-right: $golden-ratio-3;
-        margin-bottom: -2px;
 
         &:hover,
         &:focus {
@@ -61,7 +49,7 @@
             display: block;
             position: absolute;
             right: 50%;
-            bottom: -17px;
+            bottom: -22px;
             margin-right: -18px;
             content: " ";
             border-left: 18px solid transparent;
@@ -82,9 +70,12 @@
         font-family: $sans !important;
         height: $golden-ratio-4;
         border: none;
+        padding-left: $golden-ratio-3;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        border-left: $golden-ratio-1 solid $orange;
+        border-radius: $golden-ratio-4 !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
       }
 
       .ui.selection.dropdown {
@@ -135,8 +126,8 @@
         font-weight: 700;
         border: none;
         cursor: pointer;
-        border-top-right-radius: $golden-ratio-0;
-        border-bottom-right-radius: $golden-ratio-0;
+        border-top-right-radius: $golden-ratio-4;
+        border-bottom-right-radius: $golden-ratio-4;
         background-color: $white;
         color: $smokey;
       }
