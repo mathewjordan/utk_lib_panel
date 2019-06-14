@@ -22,7 +22,7 @@
     font-size: $type-1;
     font-weight: 700;
     color: $white;
-    margin-top: $golden-ratio-3;
+    margin-top: $golden-ratio-2;
     align-items: center;
     transition: background-color 110ms ease-in-out;
     border: 2px solid rgba($white, 0.11);
@@ -45,6 +45,8 @@
 }
 
 .utk-panel-focus-research-tools .utk-research-tools {
+  padding-right: $golden-ratio-5;
+
   .utk-collapse-research-tools {
     opacity: 1;
   }

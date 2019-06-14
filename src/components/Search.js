@@ -21,10 +21,10 @@ class Search extends Component {
                     </Input>
                 </Tab.Pane>
             },
-            { menuItem: 'lib.utk.edu', render: () =>
+            { menuItem: 'Our Website', render: () =>
                 <Tab.Pane attached={false}>
                     <Input type='text'
-                           placeholder='Find hours, services, and more...'
+                           placeholder='Search our website for services and more...'
                            action>
                         <input />
                         <Button type='submit'>Submit</Button>

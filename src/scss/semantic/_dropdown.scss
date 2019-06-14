@@ -13,13 +13,13 @@ body .utk-research-tools .ui.labeled.icon.button {
   height: 47px;
   padding: 0 calc(65px) 0 18px !important;
   box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29);
-  width: calc(100% / 1.61803);
   max-width: 100%;
   transition: all 110ms ease-in-out;
   position: relative;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   outline: none;
+  width: 100% !important;
 
   >.text {
     display: inline-block;
@@ -39,7 +39,6 @@ body .ui.labeled.icon.buttons>.button>.icon {
   margin: 0;
   width: 2.57142857em;
   background-color: rgba(0,0,0,.05);
-  color: '';
   -webkit-box-shadow: -1px 0 0 0 transparent inset;
   box-shadow: -1px 0 0 0 transparent inset;
   line-height: 45px;
