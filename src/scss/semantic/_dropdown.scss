@@ -171,18 +171,13 @@ body .utk-research-tools {
     width: auto !important;
     border-bottom-right-radius: $golden-ratio-0 !important;
     border-bottom-left-radius: $golden-ratio-0 !important;
+    max-height: 38.2vh;
   }
 
   .ui.dropdown .scrolling.menu,
   .ui.scrolling.dropdown .menu {
     overflow-x: hidden;
     overflow-y: auto;
-  }
-
-  @media only screen and (min-width: 992px) {
-    .ui.dropdown .scrolling.menu, .ui.scrolling.dropdown .menu {
-      max-height: 20.57142857rem;
-    }
   }
 
   .ui.dropdown .menu>.item {
@@ -202,23 +197,4 @@ body .utk-research-tools {
     padding: $golden-ratio-1 $golden-ratio-2 !important;
     font-size: $type-2;
   }
-}
-
-body ::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 10px;
-  height: 10px;
-}
-
-body ::-webkit-scrollbar-thumb {
-  cursor: pointer;
-  border-radius: 5px;
-  background: $rock;
-  -webkit-transition: color .2s ease;
-  transition: color .2s ease;
-}
-
-body ::-webkit-scrollbar-track {
-  background: $gray-1;
-  border-radius: 0;
 }
