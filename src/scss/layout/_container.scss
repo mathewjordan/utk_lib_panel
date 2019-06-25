@@ -85,7 +85,7 @@
       }
 
       @include respond(xs) {
-        padding: $golden-ratio-4 $golden-ratio-2 0;
+        padding: $golden-ratio-2 0 0;
       }
 
       > div {

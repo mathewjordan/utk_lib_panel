@@ -34,7 +34,12 @@
     }
 
     > .ui.menu {
-      margin-bottom: 22px;
+      margin-bottom: $golden-ratio-2;
+
+      @include respond(xs) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
 
       &::before {
         content: 'Search';
@@ -45,6 +50,13 @@
         margin-top: 0;
         color: $white !important;
         margin-right: $golden-ratio-3;
+
+        @include respond(xs) {
+          font-size: $type-1;
+          font-weight: 700;
+          margin-right: $golden-ratio-2;
+          text-transform: uppercase;
+        }
       }
 
       a,
@@ -59,7 +71,11 @@
         cursor: pointer;
         padding: 0 0;
         margin-right: $golden-ratio-2;
-        margin-bottom: -3px;
+        margin-bottom: 0px;
+
+        @include respond(xs) {
+          font-size: $type-2;
+        }
 
         &::after {
           width: 18px;
@@ -94,6 +110,11 @@
       border-radius: $golden-ratio-0;
       box-shadow: $box-shadow;
 
+      @include respond(xs) {
+        display: flex;
+        flex-direction: column;
+      }
+
       > input {
         font-size: $type-2;
         font-family: $sans !important;
@@ -105,6 +126,12 @@
         border-radius: $golden-ratio-4 !important;
         border-top-right-radius: 0 !important;
         border-bottom-right-radius: 0 !important;
+        text-overflow: ellipsis;
+
+        @include respond(xs) {
+          font-size: $type-1;
+          border-radius: $golden-ratio-4 !important;
+        }
       }
 
       .ui.selection.dropdown {
@@ -120,6 +147,20 @@
         color: $smokeyx;
         padding-right: 33px;
         position: relative;
+        z-index: 1;
+
+        @include respond(xs) {
+          height: $golden-ratio-3;
+          border-radius: $golden-ratio-4;
+          margin-top: $golden-ratio-1;
+          width: 100%;
+          background-color: transparent;
+          border: 2px solid rgba($white, 0.11);
+
+          > .text {
+            color: $white !important;
+          }
+        }
 
         .menu {
           font-size: $type-1;
@@ -139,6 +180,10 @@
           top: 17px;
           font-size: $type-0;
           color: $gray-3;
+
+          @include respond(xs) {
+            top: 10px;
+          }
         }
 
         &.active::before {
@@ -161,6 +206,10 @@
         border-bottom-right-radius: $golden-ratio-4;
         background-color: $white;
         color: $smokeyx;
+
+        @include respond(xs) {
+          display: none;
+        }
       }
     }
   }

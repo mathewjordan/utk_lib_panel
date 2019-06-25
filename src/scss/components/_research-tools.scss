@@ -12,6 +12,14 @@
     text-shadow: $box-shadow;
     margin-top: 0;
     color: $white !important;
+
+    @include respond(xs) {
+      margin-bottom: $golden-ratio-1;
+      font-size: $type-1;
+      font-weight: 700;
+      margin-right: $golden-ratio-2;
+      text-transform: uppercase;
+    }
   }
 
   .utk-collapse-research-tools {
