@@ -36,7 +36,7 @@ class Search extends Component {
         const onesearchOptions = [
             { key: 'onesearch', text: 'One Search', value: 'onesearch' },
             { key: 'ut-collections', text: 'UT Collections', value: 'ut-collections' },
-            { key: 'course-reviews', text: 'Course Reviews', value: 'course-reviews' },
+            { key: 'course-reviews', text: 'Course Reserves', value: 'course-reviews' },
         ]
 
         return (
