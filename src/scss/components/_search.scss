@@ -115,6 +115,7 @@
           > .item {
             font-size: $type-1;
             cursor: pointer;
+            padding: $golden-ratio-1 !important;
           }
         }
 
@@ -132,6 +133,7 @@
 
         > .text {
           align-self: center;
+          color: $smokey;
         }
       }
 
@@ -144,7 +146,7 @@
         border-top-right-radius: $golden-ratio-4;
         border-bottom-right-radius: $golden-ratio-4;
         background-color: $white;
-        color: $smokey;
+        color: $smokeyx;
       }
     }
   }

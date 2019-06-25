@@ -60,6 +60,7 @@
     transition: box-shadow .1s ease,width .1s ease;
     transition: box-shadow .1s ease,width .1s ease,-webkit-box-shadow .1s ease;
     position: relative;
+    padding: $golden-ratio-1 35px $golden-ratio-1 $golden-ratio-1 !important;
   }
 
   .ui.selection.dropdown .menu {
@@ -122,12 +123,18 @@
     transition: opacity .1s ease;
     z-index: 11;
     will-change: transform,opacity;
+
+    > .item {
+      white-space: nowrap;
+      color: $smokey;
+    }
   }
 
   .ui.selection.active.dropdown .menu {
-    border-color: #96c8da;
+    border-color: $gray-1;
     -webkit-box-shadow: 0 2px 3px 0 rgba(34,36,38,.15);
     box-shadow: 0 2px 3px 0 rgba(34,36,38,.15);
+    color: $smokey !important;
   }
 
   .visible.transition {

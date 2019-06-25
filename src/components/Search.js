@@ -9,7 +9,7 @@ class Search extends Component {
             { menuItem: 'OneSearch', render: () =>
                 <Tab.Pane attached={false}>
                     <Input type='text'
-                           placeholder='Search catalog for books and more...'
+                           placeholder='Search for books, articles, and more...'
                            action>
                         <input />
                         <Select compact
