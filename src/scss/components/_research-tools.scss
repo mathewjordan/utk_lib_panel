@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
 
+  @include respond(xs, sm) {
+    padding-bottom: $golden-ratio-2;
+  }
+
   h3 {
     font-size: $type-4;
     font-weight: 400;
@@ -38,6 +42,10 @@
     padding: 0 $golden-ratio-1;
     height: $golden-ratio-3;
 
+    @include respond(xs) {
+      display: none;
+    }
+
     &:hover,
     &:focus {
       border: none;
@@ -61,6 +69,10 @@
 
   .utk-collapse-research-tools {
     opacity: 1;
+
+    @include respond(xs) {
+      display: inline-flex;
+    }
   }
 
   &--option {

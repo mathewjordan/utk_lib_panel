@@ -21,10 +21,18 @@ body .utk-research-tools .ui.labeled.icon.button {
   outline: none;
   width: 100% !important;
 
+  @include respond(xs) {
+    font-size: $type-0 !important;
+  }
+
   >.text {
     display: inline-block;
     -webkit-transition: none;
     transition: none;
+
+    @include respond(xs) {
+      font-size: $type-1 !important;
+    }
   }
 }
 
