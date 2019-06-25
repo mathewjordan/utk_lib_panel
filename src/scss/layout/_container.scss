@@ -167,7 +167,7 @@
 
         @include respond(xs) {
           width: 100%;
-          margin-bottom: $golden-ratio-2;
+          margin-bottom: 0;
         }
       }
 
