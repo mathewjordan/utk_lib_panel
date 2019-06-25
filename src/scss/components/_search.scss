@@ -61,7 +61,7 @@
 
       a,
       a:visited {
-        color: $summitt !important;
+        color: $white !important;
         font-size: $type-3;
         white-space: inherit;
         font-weight: 400;
@@ -92,11 +92,11 @@
 
         &:hover,
         &:focus {
-          color: $summitt !important;
+          color: $white !important;
         }
 
         &.active {
-          color: $summitt !important;
+          color: $white !important;
 
           &::after {
             content: " ";

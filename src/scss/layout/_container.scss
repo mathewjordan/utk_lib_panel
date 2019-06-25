@@ -15,8 +15,8 @@
 
       > img {
         width: 100%;
-        filter: blur(11px);
-        opacity: 0.76;
+        filter: blur(6px);
+        opacity: 0.47;
         position: absolute;
         transition: $transition-all;
         transform: scale3d(1,1,1);
@@ -30,7 +30,7 @@
         height: 100%;
         z-index: 1;
 
-        $start : rgba($fountain, 0.29);
+        $start : rgba($smokey, 0.11);
         $start-percent : 0%;
         $end : $smokeyx;
         $end-percent : 61.8%;
@@ -51,7 +51,7 @@
         height: 100%;
         z-index: 1;
 
-        $start : rgba($fountain, 0.18);
+        $start : rgba($smokey, 0.18);
         $start-percent : 0;
         $end : $smokeyx;
         $end-percent : 400px;
@@ -85,7 +85,7 @@
       }
 
       @include respond(xs) {
-        padding: $golden-ratio-2 0 0;
+        padding: $golden-ratio-3 0 $golden-ratio-1;
       }
 
       > div {
@@ -96,7 +96,7 @@
     }
 
     &.utk-panel-focus-search {
-      background-color: $fountain;
+      background-color: $regalia;
       color: $white;
 
       .utk-panel--search {

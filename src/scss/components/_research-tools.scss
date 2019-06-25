@@ -5,7 +5,7 @@
   flex-direction: column;
 
   @include respond(xs, sm) {
-    padding-bottom: $golden-ratio-2;
+    padding-bottom: $golden-ratio-3;
   }
 
   h3 {
