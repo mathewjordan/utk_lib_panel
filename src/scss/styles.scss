@@ -9,6 +9,13 @@
 @import "utilities/mixins";
 
 /*
+ * bootstrap globals
+ */
+@import "global/bootstrap-vars";
+@import "global/bootstrap-mixins";
+@import "global/bootstrap-grid";
+
+/*
  * semantic ui
  */
 @import "semantic/dropdown";
