@@ -19,6 +19,20 @@
     transition: $transition-all-fast;
     opacity: 1;
 
+    @include respond(md) {
+      padding-right: $golden-ratio-5;
+    }
+
+    @include respond(sm) {
+      padding-right: 0;
+      padding-bottom: $golden-ratio-4;
+    }
+
+    @include respond(xs) {
+      padding-right: 0;
+      padding-bottom: $golden-ratio-3;
+    }
+
     > .ui.menu {
       margin-bottom: 22px;
 

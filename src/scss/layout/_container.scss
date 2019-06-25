@@ -74,8 +74,18 @@
       width: 100%;
       position: relative;
 
-      @include respond(xs, sm, md) {
+      @include respond(md) {
+        padding-top: $golden-ratio-4;
+      }
+
+      @include respond(xs, sm) {
         flex-direction: column;
+        padding-top: $golden-ratio-4;
+        align-items: center;
+      }
+
+      @include respond(xs) {
+        padding: $golden-ratio-4 $golden-ratio-2 0;
       }
 
       > div {
@@ -92,15 +102,25 @@
         width: $gr-long;
         opacity: 1;
         padding-right: 0;
-        //padding-left: $golden-ratio-4;
         transition: $transition-all;
+
+        @include respond(xs, sm) {
+          width: 100% !important;
+        }
       }
 
       .utk-panel--research-tools {
         width: $gr-short;
-        //padding-right: $golden-ratio-4;
         padding-left: 0;
         transition: $transition-all;
+
+        @include respond(sm) {
+          width: $gr-long !important;
+        }
+
+        @include respond(xs) {
+          width: 100% !important;
+        }
       }
 
       .utk-panel--subject-guide {
