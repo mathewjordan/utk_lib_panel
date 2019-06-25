@@ -105,9 +105,8 @@ class ResearchTools extends Component {
                         onChange={this.applyFilter}
                     >
                         <Dropdown.Menu>
-                            <Input icon='search'
-                                   iconPosition='left'
-                                   className='search'
+                            <Input className='search'
+                                   placeholder='Filter by Subject Name'
                                    onFocus={this.onInputFocus}
                                    onClick={this.onInputFocus} />
                             <Dropdown.Menu scrolling>
