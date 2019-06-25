@@ -105,6 +105,7 @@
         transition: $transition-all;
 
         @include respond(xs, sm) {
+          height: auto;
           width: 100% !important;
         }
       }
@@ -146,21 +147,33 @@
         padding-right: 0;
         padding-left: 0;
         transition: $transition-all;
+
+        @include respond(xs, sm) {
+          height: 0;
+          width: auto;
+        }
       }
 
       .utk-panel--research-tools {
         width: $gr-short;
         padding-right: 0;
-        //padding-left: $golden-ratio-4;
         transition: $transition-all;
+
+        @include respond(xs, sm) {
+          width: 100%;
+          margin-bottom: $golden-ratio-4;
+        }
       }
 
       .utk-panel--subject-guide {
         width: $gr-long;
         opacity: 1;
-        //padding-right: $golden-ratio-4;
         padding-left: 0;
         transition: $transition-all;
+
+        @include respond(xs, sm) {
+          width: 100%;
+        }
       }
     }
 

@@ -4,6 +4,10 @@
   max-height: 100%;
   padding: $golden-ratio-4 0;
 
+  @include respond(xs, sm) {
+    display: none;
+  }
+
   h5 {
     color: $white !important;
     text-transform: uppercase;
