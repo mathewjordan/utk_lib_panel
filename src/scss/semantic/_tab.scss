@@ -3,16 +3,27 @@
   .ui.secondary.menu {
     margin-bottom: $golden-ratio-3;
 
+    @include respond(xs) {
+      margin-bottom: $golden-ratio-1;
+    }
+
     a.item {
-      color: $white;
+      color: $gray-0;
       font-size: $type-2;
       font-family: $sans !important;
       align-self: flex-start;
       height: $golden-ratio-4;
       padding: 0 $golden-ratio-2;
       border-radius: $golden-ratio-0 !important;
-      background-color: rgba($smokeyx, 0.76);
+      background-color: rgba($smokey, 0.47);
       margin-right: $golden-ratio-2;
+
+      @include respond(xs) {
+        padding: 0 $golden-ratio-1;
+        height: $golden-ratio-3;
+        font-size: $type-1;
+        margin-bottom: $golden-ratio-0;
+      }
 
       .ui.label {
         background-color: transparent;
@@ -25,7 +36,7 @@
       }
 
       &.active {
-        background-color: rgba($fountain, 0.18);
+        background-color: $smokeyx;
         color: $white;
         font-weight: 700;
 
@@ -48,6 +59,10 @@
     display: -ms-flexbox;
     display: flex;
     font-weight: 400;
+
+    @include respond(xs) {
+      flex-wrap: wrap;
+    }
   }
 
   *, *::before, *::after {

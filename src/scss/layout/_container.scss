@@ -91,6 +91,7 @@
       > div {
         display: flex;
         transition: $transition-opacity;
+        flex-direction: column;
       }
     }
 
@@ -159,9 +160,14 @@
         padding-right: 0;
         transition: $transition-all;
 
-        @include respond(xs, sm) {
+        @include respond(sm) {
           width: 100%;
-          margin-bottom: $golden-ratio-4;
+          margin-bottom: $golden-ratio-3;
+        }
+
+        @include respond(xs) {
+          width: 100%;
+          margin-bottom: $golden-ratio-2;
         }
       }
 
