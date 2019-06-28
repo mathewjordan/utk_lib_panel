@@ -5,7 +5,7 @@ import {DataAssets} from '../data/DataAssets'
 import SubjectAssets from "./SubjectAssets";
 import Error from "./Error";
 
-const libGuidesEndpoint = 'https://libguides.herokuapp.com/';
+const libGuidesEndpoint = 'https://www.lib.utk.edu/wp-json/libguides/subject/';
 
 class Subject extends Component {
 
