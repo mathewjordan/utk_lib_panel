@@ -193,21 +193,32 @@
 
 #utk-panel-mini {
   background-color: transparent;
+  margin-bottom: $golden-ratio-4;
 
   .utk-panel-wrap.utk-panel-mini-wrap {
     background-color: transparent !important;
+
+    > .container {
+      padding: 0 !important;
+      position: static;
+      z-index: auto;
+    }
 
     &.utk-panel-focus-research-tools .utk-search-tabs {
       opacity: 1 !important;
     }
 
-    &.utk-panel-focus-search .utk-panel--subject-guide {
+    .utk-panel--subject-guide {
       opacity: 1 !important;
       width: auto;
       display: none;
 
       &.active-item {
         display: block;
+      }
+
+      .utk-subject-guide {
+        height: auto;
       }
     }
 

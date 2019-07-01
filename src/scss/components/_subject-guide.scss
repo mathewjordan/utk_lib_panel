@@ -308,3 +308,33 @@
   height: auto;
   padding: 0 0 $golden-ratio-4;
 }
+
+#utk-panel-mini  {
+  .utk-subject-guide--assets {
+    .utk-subject-guide--asset--header {
+      h5 {
+        color: $smokey;
+      }
+
+      a,
+      a:visited {
+        color: $globe !important;
+      }
+    }
+  }
+  .utk-subject-guide--databases,
+  .utk-subject-guide--guides {
+    ul li {
+        border-color: $gray-0;
+
+      > div {
+        color: $smokeyx;
+      }
+
+      a,
+      a:visited {
+        color: $globe !important;
+      }
+    }
+  }
+}

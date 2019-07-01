@@ -14,7 +14,7 @@ class SubjectGuide extends Component {
 
     componentWillMount () {
         let that = this;
-        let timeout = that.props.instance * 60
+        let timeout = that.props.instance * 20
         setTimeout(function() {
             that.setState({
                 delay : ""
