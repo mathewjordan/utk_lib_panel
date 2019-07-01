@@ -1,4 +1,5 @@
-#utk-panel {
+#utk-panel,
+#utk-panel-mini {
   .utk-panel-wrap {
     transition: $transition-all;
     position: relative;
@@ -187,5 +188,63 @@
       position: relative;
       z-index: 1;
     }
+  }
+}
+
+#utk-panel-mini {
+  background-color: transparent;
+
+  .utk-panel-wrap.utk-panel-mini-wrap {
+    background-color: transparent !important;
+
+    &.utk-panel-focus-research-tools .utk-search-tabs {
+      opacity: 1 !important;
+    }
+
+    &.utk-panel-focus-search .utk-panel--subject-guide {
+      opacity: 1 !important;
+      width: auto;
+    }
+
+    .utk-panel {
+      padding: 0;
+      flex-direction: column !important;
+
+      > div {
+        width: 100% !important;
+        opacity: 1 !important;
+        margin-right: 0 !important;
+        margin-top: $golden-ratio-3;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      .utk-panel--research-tools .utk-research-tools{
+        flex-direction: row !important;
+      }
+    }
+
+    .utk-search-tabs {
+      padding-right: 0;
+    }
+  }
+
+  .utk-search .utk-search-tabs > .ui.menu::before {
+    color: $smokey !important;
+    text-shadow: none;
+  }
+
+  .utk-search .utk-search-tabs > .ui.menu a.active,
+  .utk-search .utk-search-tabs > .ui.menu a:visited.active {
+    color: $smokey !important;
+    text-shadow: none;
+  }
+
+  .utk-search .utk-search-tabs > .ui.menu a,
+  .utk-search .utk-search-tabs > .ui.menu a:visited {
+    color: $smokey !important;
+    text-shadow: none;
   }
 }
