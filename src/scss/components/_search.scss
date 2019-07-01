@@ -231,4 +231,17 @@
       background-color: $gray-0;
     }
   }
+
+  .utk-search .utk-search-tabs .ui.action.input .ui.selection.dropdown {
+    background-color: $gray-0;
+    border: 1px solid $gray-1;
+    border-left: 0;
+  }
+
+  .utk-search .utk-search-tabs .ui.action.input button.ui.button {
+    background-color: $gray-0;
+    border: 1px solid $gray-1;
+    border-left: 0;
+    color: $smokeyx;
+  }
 }
