@@ -79,3 +79,24 @@
     display: none;
   }
 }
+
+.utk-research-tools-mini--options {
+  font-size: $type-4;
+  display: block;
+  margin-bottom: $golden-ratio-1;
+
+  a,
+  a:visited {
+    margin-right: $golden-ratio-3;
+    color: $globe !important;
+
+    &.active-item {
+      font-weight: 700;
+    }
+  }
+
+  a:hover,
+  a:focus {
+    color: $leconte !important;
+  }
+}

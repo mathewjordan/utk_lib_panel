@@ -44,8 +44,6 @@ class SubjectAssets extends Component {
 
         if (data.featured_databases.length !== 0 && build === false) {
 
-            console.log('update here...')
-
             let databasePanes =
                 {
                     menuItem: (
@@ -136,8 +134,6 @@ class SubjectAssets extends Component {
     }
 
     render() {
-
-        console.log('something')
 
         const {id, title} = this.props.subjectHeader
         const {subjectData} = this.props
