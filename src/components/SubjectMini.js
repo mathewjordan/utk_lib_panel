@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
 
-import {DataAssets} from '../data/DataAssets'
 import SubjectAssets from "./SubjectAssets";
 import Error from "./Error";
 
 const libGuidesEndpoint = 'https://www.lib.utk.edu/wp-json/libguides/subject/';
 
-class Subject extends Component {
+class SubjectMini extends Component {
 
     constructor(props) {
         super(props);
@@ -97,12 +96,17 @@ class Subject extends Component {
 
     render() {
 
+        let activeClass = '';
+
+        if (this.props.active)
+            activeClass = 'active-item'
+
         return (
-            <div className="utk-panel--subject-guide">
+            <div className={`utk-panel--subject-guide ${activeClass}`}>
                 {this.renderSubject(this.state.data)}
             </div>
         )
     }
 }
 
-export default Subject;
+export default SubjectMini;

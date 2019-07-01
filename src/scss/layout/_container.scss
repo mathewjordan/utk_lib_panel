@@ -204,6 +204,11 @@
     &.utk-panel-focus-search .utk-panel--subject-guide {
       opacity: 1 !important;
       width: auto;
+      display: none;
+
+      &.active-item {
+        display: block;
+      }
     }
 
     .utk-panel {
