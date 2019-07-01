@@ -329,12 +329,38 @@
 
       > div {
         color: $smokeyx;
+
+        a,
+        a:visited {
+          color: $globe !important;
+        }
       }
 
       a,
       a:visited {
         color: $globe !important;
       }
+    }
+  }
+
+  .utk-subject-guide .ui.secondary.menu a.item {
+    background-color: $gray-1;
+    color: $smokey;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+
+    .ui.label {
+      color: $smokey;
+    }
+  }
+
+  .utk-subject-guide .ui.secondary.menu a.item.active {
+    background-color: $smokey;
+    color: $white !important;
+
+    .ui.label {
+      color: $white;
     }
   }
 }

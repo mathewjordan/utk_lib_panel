@@ -81,14 +81,21 @@
 }
 
 .utk-research-tools-mini--options {
-  font-size: $type-4;
-  display: block;
-  margin-bottom: $golden-ratio-1;
+  font-size: $type-3;
+  display: flex;
 
   a,
   a:visited {
-    margin-right: $golden-ratio-3;
+    margin-right: $golden-ratio-2;
+    padding-right: $golden-ratio-2;
     color: $globe !important;
+    border-right: 2px solid $gray-1;
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+      border-right: none;
+    }
 
     &.active-item {
       font-weight: 700;

@@ -13,7 +13,7 @@ class Search extends Component {
     render() {
 
         const panes = [
-            { menuItem: 'OneSearch', render: () =>
+            { menuItem: 'One Search', render: () =>
                 <SearchForm selection='onesearch'
                             options={onesearchOptions}
                             placeholder='Search for books, articles, and more...' />

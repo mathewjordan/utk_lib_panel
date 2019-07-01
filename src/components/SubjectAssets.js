@@ -54,10 +54,6 @@ class SubjectAssets extends Component {
                     render: () =>
                         <Tab.Pane attached={false}>
                             <div className="utk-subject-guide--databases utk-subject-guide--asset">
-                                <div className="utk-subject-guide--asset--header">
-                                    <h5>Recommended Databases</h5>
-                                    <a>View All Databases <span className='icon-open-right'></span></a>
-                                </div>
                                 <ul>
                                     {data.featured_databases.map((item, key) => (
                                         <SubjectDatabase key={key}
@@ -101,9 +97,6 @@ class SubjectAssets extends Component {
                     render: () =>
                         <Tab.Pane attached={false}>
                             <div className="utk-subject-guide--guides utk-subject-guide--asset">
-                            <div className="utk-subject-guide--asset--header">
-                                <h5>Research Guides</h5>
-                            </div>
                             <ul>
                                 {data.associated_libguides.map((item, key) => (
                                     <SubjectGuide key={key}

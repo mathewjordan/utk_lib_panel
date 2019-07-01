@@ -1,7 +1,7 @@
 .utk-subject-guide,
 .utk-search {
   .ui.secondary.menu {
-    margin-bottom: $golden-ratio-3;
+    margin-bottom: $golden-ratio-2;
 
     @include respond(xs) {
       margin-bottom: $golden-ratio-1;
