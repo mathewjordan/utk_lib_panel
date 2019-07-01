@@ -225,10 +225,15 @@
       }
     }
 
+    form {
+      border-radius: $golden-ratio-4;
+      box-shadow: $box-shadow;
+    }
+
     .ui.input > input {
       border: 1px solid $gray-1;
       box-shadow: none;
-      background-color: $gray-0;
+      background-color: $white;
     }
   }
 
