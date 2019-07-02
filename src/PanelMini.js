@@ -12,7 +12,7 @@ class PanelMini extends Component {
         <div className="container utk-panel-container">
             <div className="utk-panel">
             <Search/>
-            <ResearchToolsMini />
+            <ResearchToolsMini subjects={this.props.subjects} />
           </div>
         </div>
       </div>
