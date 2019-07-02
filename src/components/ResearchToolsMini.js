@@ -12,8 +12,14 @@ class ResearchToolsMini extends Component {
         super(props);
 
         this.state = {
-            active : 39783
+            active : ''
         }
+    }
+
+    componentDidMount() {
+        this.setState({
+            active : dataSubjects[0].id
+        })
     }
 
     handleClick = (e, id) => {
@@ -43,7 +49,7 @@ class ResearchToolsMini extends Component {
     }
 
     renderPanes () {
-        return DataSubjectsAgvet.map(subject => {
+        return dataSubjects.map(subject => {
 
             let activeItem = false;
 
