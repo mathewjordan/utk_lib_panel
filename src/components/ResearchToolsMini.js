@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 import SubjectMini from "./SubjectMini";
-import {DataSubjectsAgvet} from '../Data/DataSubjectsAgvet';
 
 const panelElement = document.getElementById('utk-panel-mini')
 const dataSubjects = JSON.parse(panelElement.getAttribute('data-subjects'))

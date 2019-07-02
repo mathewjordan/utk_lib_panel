@@ -310,8 +310,16 @@
 }
 
 #utk-panel-mini  {
+  .utk-subject-guide--header {
+    margin-bottom: 0;
+  }
+
   .utk-subject-guide--assets {
+    margin-top: 0;
+
     .utk-subject-guide--asset--header {
+      margin-bottom: 0;
+
       h5 {
         color: $smokey;
       }
