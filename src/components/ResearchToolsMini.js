@@ -30,21 +30,24 @@ class ResearchToolsMini extends Component {
     }
 
     renderTitles () {
-        return dataSubjects.map(subject => {
+        if (dataSubjects.length > 1)
+            return dataSubjects.map(subject => {
 
-            let activeClass = null;
+                let activeClass = null;
 
-            if (subject.id === this.state.active)
-                activeClass = 'active-item'
+                if (subject.id === this.state.active)
+                    activeClass = 'active-item'
 
-            return (
-                    <a href="#"
-                       data-subject-id={subject.id}
-                       className={activeClass}
-                       onClick={this.handleClick.bind(this)}>{subject.title}</a>
-                )
-            }
-        )
+                return (
+                        <a href="#"
+                           data-subject-id={subject.id}
+                           className={activeClass}
+                           onClick={this.handleClick.bind(this)}>{subject.title}</a>
+                    )
+                }
+            )
+        else
+            return
     }
 
     renderPanes () {
