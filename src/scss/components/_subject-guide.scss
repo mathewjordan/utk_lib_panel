@@ -350,6 +350,10 @@
     display: flex;
     justify-content: space-between;
 
+    &:last-child {
+      margin-right: 0;
+    }
+
     .ui.label {
       color: $smokey;
     }
