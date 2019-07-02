@@ -3,6 +3,9 @@ import React, {Component} from 'react';
 import SubjectMini from "./SubjectMini";
 import {DataSubjectsAgvet} from '../Data/DataSubjectsAgvet';
 
+const panelElement = document.getElementById('utk-panel-mini')
+const dataSubjects = JSON.parse(panelElement.getAttribute('data-subjects'))
+
 class ResearchToolsMini extends Component {
 
     constructor(props) {
@@ -22,7 +25,7 @@ class ResearchToolsMini extends Component {
     }
 
     renderTitles () {
-        return DataSubjectsAgvet.map(subject => {
+        return dataSubjects.map(subject => {
 
             let activeClass = null;
 
@@ -56,19 +59,21 @@ class ResearchToolsMini extends Component {
     }
 
     render() {
-
-        return (
-            <div className="utk-panel--research-tools">
-                <div className="utk-research-tools utk-research-tools-mini">
-                    <div className='utk-research-tools-mini--options'>
-                        {this.renderTitles()}
-                    </div>
-                    <div className='utk-research-tools-mini--panes'>
-                        {this.renderPanes()}
+        if (dataSubjects)
+            return (
+                <div className="utk-panel--research-tools">
+                    <div className="utk-research-tools utk-research-tools-mini">
+                        <div className='utk-research-tools-mini--options'>
+                            {this.renderTitles()}
+                        </div>
+                        <div className='utk-research-tools-mini--panes'>
+                            {this.renderPanes()}
+                        </div>
                     </div>
                 </div>
-            </div>
-        )
+            )
+        else
+            return null
     }
 }
 
