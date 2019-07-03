@@ -117,11 +117,10 @@
         }
 
         h5 {
-          font-size: $type-1;
+          font-size: $type-2;
           font-weight: 700;
-          text-transform: uppercase;
-          color: white;
           margin: 0;
+          color: white;
 
           @include respond(xs) {
             font-size: $type-0;
@@ -133,7 +132,7 @@
         > a:visited {
           font-weight: 400;
           display: flex;
-          font-size: $type-1;
+          font-size: $type-2;
           align-content: center;
           position: relative;
           color: $eureka;
@@ -191,6 +190,16 @@
 
   &--databases,
   &--guides {
+
+    &.utk-show-all {
+      display: none !important;
+      margin-top: $golden-ratio-1;
+
+      &.utk-show-all-enabled {
+        display: block !important;
+      }
+    }
+
     ul {
       margin: 0;
       padding: 0;
@@ -200,6 +209,15 @@
         padding: $golden-ratio-1 $golden-ratio-2;
         border-radius: $golden-ratio-1;
         border: 2px solid rgba($white, 0.11);
+
+        &.utk-featured::before {
+          content: ' ';
+          display: block;
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background-color: red;
+        }
 
         @include respond(xs) {
           border-left: none;
@@ -268,6 +286,18 @@
           }
         }
       }
+    }
+
+    .utk-show-all--toggle {
+      display: block;
+      height: $golden-ratio-4;
+      background-color: red;
+      text-align: center;
+      line-height: $golden-ratio-4;
+      border-radius: $golden-ratio-0;
+      color: $white !important;
+      text-transform: uppercase;
+      font-weight: 700;
     }
   }
 

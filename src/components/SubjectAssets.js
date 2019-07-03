@@ -16,7 +16,8 @@ class SubjectAssets extends Component {
             buildDatabase: false,
             buildGuides: false,
             databasePanes: [],
-            guidePanes: []
+            guidePanes: [],
+            allDatabases: 'utk-show-all'
         }
     }
 
@@ -26,6 +27,19 @@ class SubjectAssets extends Component {
             buildGuides: false,
             update: false
         });
+    }
+
+    toggleDatabases = () => {
+        this.setState({
+            allDatabases: 'utk-show-all utk-show-all-enabled'
+        });
+    }
+
+    showAllDatabases (data) {
+        if (data.featured_databases.length !== data.total_databases && this.state.allDatabases === 'utk-show-all')
+            return <a className="utk-show-all--toggle" onClick={this.toggleDatabases}>Show All Databases</a>
+        else
+            return null
     }
 
     componentDidMount() {
@@ -42,6 +56,8 @@ class SubjectAssets extends Component {
 
         const build = this.state.buildDatabase;
 
+        console.log(data)
+
         if (data.featured_databases.length !== 0 && build === false) {
 
             let databasePanes =
@@ -54,8 +70,26 @@ class SubjectAssets extends Component {
                     render: () =>
                         <Tab.Pane attached={false}>
                             <div className="utk-subject-guide--databases utk-subject-guide--asset">
+                                <div className="utk-subject-guide--asset--header">
+                                    <h5>Recommended Databases</h5>
+                                </div>
                                 <ul>
                                     {data.featured_databases.map((item, key) => (
+                                        <SubjectDatabase key={key}
+                                                         featured={true}
+                                                         unique={id + '-' +  key}
+                                                         instance={key}
+                                                         item={item}/>
+                                    ))}
+                                    {this.showAllDatabases(data)}
+                                </ul>
+                            </div>
+                            <div className={`utk-subject-guide--databases utk-subject-guide--asset ${this.state.allDatabases}`}>
+                                <div className="utk-subject-guide--asset--header">
+                                    <h5>More Databases</h5>
+                                </div>
+                                <ul>
+                                    {data.other_databases.map((item, key) => (
                                         <SubjectDatabase key={key}
                                                          unique={id + '-' +  key}
                                                          instance={key}
@@ -97,15 +131,18 @@ class SubjectAssets extends Component {
                     render: () =>
                         <Tab.Pane attached={false}>
                             <div className="utk-subject-guide--guides utk-subject-guide--asset">
-                            <ul>
-                                {data.associated_libguides.map((item, key) => (
-                                    <SubjectGuide key={key}
-                                                  unique={id + '-' +  key}
-                                                  instance={key}
-                                                  item={item}/>
-                                ))}
-                            </ul>
-                        </div>
+                                <div className="utk-subject-guide--asset--header">
+                                    <h5>Research Guides</h5>
+                                </div>
+                                <ul>
+                                    {data.associated_libguides.map((item, key) => (
+                                        <SubjectGuide key={key}
+                                                      unique={id + '-' +  key}
+                                                      instance={key}
+                                                      item={item}/>
+                                    ))}
+                                </ul>
+                            </div>
                         </Tab.Pane>
                 }
 

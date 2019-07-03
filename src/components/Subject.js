@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
 
-import {DataAssets} from '../data/DataAssets'
 import SubjectAssets from "./SubjectAssets";
 import Error from "./Error";
 

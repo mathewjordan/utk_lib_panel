@@ -26,11 +26,16 @@ class SubjectDatabase extends Component {
 
     render() {
 
-        const {item} = this.props
+        const {item, featured} = this.props
         const entities = new Entities();
 
+        let featuredClass = ''
+
+        if (featured)
+            featuredClass = 'utk-featured '
+
         return (
-            <li className={this.state.delay}>
+            <li className={featuredClass + this.state.delay}>
                 <a href={item.url}>
                     <h5>{item.name}</h5>
                 </a>
