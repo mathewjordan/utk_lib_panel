@@ -8,14 +8,14 @@
     }
 
     a.item {
-      color: $gray-0;
+      color: $gray-1;
       font-size: $type-2;
       font-family: $sans !important;
       align-self: flex-start;
       height: $golden-ratio-4;
       padding: 0 $golden-ratio-2;
       border-radius: $golden-ratio-0 !important;
-      background-color: rgba($smokey, 0.47);
+      background-color: $smokey;
       margin-right: $golden-ratio-2;
 
       @include respond(xs) {
@@ -36,12 +36,12 @@
       }
 
       &.active {
-        background-color: $smokeyx;
-        color: $white;
+        background-color: $gray-1;
+        color: $smokeyx;
         font-weight: 700;
 
         .ui.label {
-          color: $white;
+          color: $smokeyx;
         }
       }
     }
