@@ -82,7 +82,8 @@ class SubjectMini extends Component {
     renderSubject = (data) => {
         if (data && this.props.activeSubject) {
             if (data)
-                return <SubjectAssets subjectHeader={this.props.activeSubject}
+                return <SubjectAssets subjectTitle={this.props.title}
+                                      subjectHeader={this.props.activeSubject}
                                       subjectData={data} />
 
             else

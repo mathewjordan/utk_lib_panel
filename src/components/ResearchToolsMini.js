@@ -57,7 +57,7 @@ class ResearchToolsMini extends Component {
             }
 
             return (
-                    <SubjectMini active={activeItem} activeSubject={subject.id} />
+                    <SubjectMini active={activeItem} title={subject.title} activeSubject={subject.id} />
                 )
             }
         )

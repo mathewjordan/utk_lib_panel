@@ -37,7 +37,7 @@ class SubjectAssets extends Component {
 
     showAllDatabases (data) {
         if (data.featured_databases.length !== data.total_databases && this.state.allDatabases === 'utk-show-all')
-            return <a className="utk-show-all--toggle" onClick={this.toggleDatabases}>Show All Databases</a>
+            return <a className="utk-show-all--toggle" onClick={this.toggleDatabases}>Show All {this.props.subjectTitle} Databases</a>
         else
             return null
     }

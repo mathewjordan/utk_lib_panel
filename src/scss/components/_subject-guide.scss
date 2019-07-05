@@ -108,7 +108,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: $golden-ratio-1;
 
         @include respond(xs) {
           flex-direction: column;
@@ -117,13 +116,13 @@
         }
 
         h5 {
-          font-size: $type-2;
+          font-size: $type-2 !important;
           font-weight: 700;
-          margin: 0;
+          margin-bottom: $golden-ratio-1;
           color: white;
 
           @include respond(xs) {
-            font-size: $type-0;
+            font-size: $type-1;
             align-items: flex-start;
           }
         }
@@ -209,14 +208,25 @@
         padding: $golden-ratio-1 $golden-ratio-2;
         border-radius: $golden-ratio-1;
         border: 2px solid rgba($white, 0.11);
+        position: relative;
 
-        &.utk-featured::before {
-          content: ' ';
+        &.utk-featured a > h5::after {
+          content: '\e80c';
           display: block;
-          position: absolute;
-          width: 10px;
-          height: 10px;
-          background-color: red;
+          width: $type-2;
+          height: $type-2;
+          border-radius: $type-2;
+          line-height: $type-2;
+          text-align: center;
+          font-size: 9px;
+          font-family: 'fontello';
+          background-color: $orange;
+          color: $white;
+          box-shadow: $box-shadow;
+          margin-left: $golden-ratio-0;
+          position: relative;
+          margin-bottom: 7px;
+          text-decoration: none !important;
         }
 
         @include respond(xs) {
@@ -245,12 +255,15 @@
 
           &:hover,
           &:focus {
-            color: $eureka;
+            color: $eureka !important;
             border: none;
-            text-decoration: underline !important;
 
             > h5 {
-              color: $eureka;
+              text-decoration: underline;
+
+              &::after {
+                text-decoration: none !important;
+              }
             }
           }
 
@@ -263,6 +276,8 @@
             color: $white;
             transition: $transition-all-fast;
             margin-top: 0 !important;
+            align-content: flex-end;
+            align-items: flex-end;
 
             @include respond(xs) {
               display: block;
@@ -282,7 +297,6 @@
           a,
           a:visited {
             color: $white !important;
-            text-decoration: underline !important;
           }
         }
       }
@@ -291,12 +305,12 @@
     .utk-show-all--toggle {
       display: block;
       height: $golden-ratio-4;
-      background-color: red;
+      background-color: $gray-1;
       text-align: center;
+      font-size: $type-1 !important;
       line-height: $golden-ratio-4;
       border-radius: $golden-ratio-0;
-      color: $white !important;
-      text-transform: uppercase;
+      color: $smokey !important;
       font-weight: 700;
     }
   }
