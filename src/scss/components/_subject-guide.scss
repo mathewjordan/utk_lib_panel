@@ -359,8 +359,6 @@
   .utk-subject-guide {
     @include respond(xs) {
       background-color: transparent;
-      margin-left: 0;
-      width: 100%;
     }
   }
 

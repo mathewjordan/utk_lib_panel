@@ -87,7 +87,6 @@
   @include respond(xs) {
     font-size: $type-2;
     flex-wrap: wrap;
-    padding: 0 $golden-ratio-2;
   }
 
   a,

@@ -226,7 +226,7 @@
     .utk-search-tabs {
       @include respond(xs) {
         margin-bottom: 0;
-        padding: 0 $golden-ratio-2 !important;
+        padding-bottom: 0;
       }
 
       .ui.action.input {
@@ -250,6 +250,7 @@
         box-shadow: none;
         display: flex;
         flex-direction: column;
+        margin-bottom: 0;
       }
     }
 
