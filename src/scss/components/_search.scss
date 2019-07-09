@@ -218,16 +218,39 @@
 }
 
 #utk-panel-mini {
+  @include respond(xs) {
+    margin-top: $golden-ratio-2 !important;
+  }
+
   .utk-search {
     .utk-search-tabs {
+      @include respond(xs) {
+        margin-bottom: 0;
+        padding: 0 $golden-ratio-2 !important;
+      }
+
       .ui.action.input {
         box-shadow: none;
+
+        .ui.selection.dropdown {
+          @include respond(xs) {
+            > .text {
+              color: $smokey !important;
+            }
+          }
+        }
       }
     }
 
     form {
       border-radius: $golden-ratio-4;
       box-shadow: $box-shadow;
+
+      @include respond(xs) {
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     .ui.input > input {

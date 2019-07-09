@@ -232,8 +232,16 @@
         margin-right: 0 !important;
         margin-top: $golden-ratio-4;
 
+        @include respond(xs) {
+          margin-top: $golden-ratio-3 !important;
+        }
+
         &:first-child {
           margin-top: 0;
+
+          @include respond(xs) {
+            margin-top: 0 !important;
+          }
         }
       }
 
