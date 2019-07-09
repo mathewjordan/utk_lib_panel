@@ -218,14 +218,14 @@
           border-radius: $type-2;
           line-height: $type-2;
           text-align: center;
-          font-size: 9px;
+          font-size: $type-2;
           font-family: 'fontello';
-          background-color: $orange;
-          color: $white;
-          box-shadow: $box-shadow;
+          background-color: transparent;
+          color: $smokey;
           margin-left: $golden-ratio-0;
-          position: relative;
-          margin-bottom: 7px;
+          position: absolute;
+          right: $type-2;
+          top: $type-2;
           text-decoration: none !important;
         }
 
@@ -278,9 +278,10 @@
             margin-top: 0 !important;
             align-content: flex-end;
             align-items: flex-end;
+            padding-right: $type-2;
 
             @include respond(xs) {
-              display: block;
+              display: flex;
               line-height: 1.47em;
               white-space: normal;
             }
