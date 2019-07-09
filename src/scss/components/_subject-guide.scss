@@ -4,7 +4,6 @@
   transition: $transition-all;
   padding: 0;
   width: 100%;
-  padding-right: 15px;
 
   @include respond(xs) {
     background-color: rgba($smokeyx, 0.47);
@@ -355,6 +354,16 @@
 }
 
 #utk-panel-mini  {
+
+
+  .utk-subject-guide {
+    @include respond(xs) {
+      background-color: transparent;
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
   .utk-subject-guide--header {
     margin-bottom: 0;
   }
@@ -372,6 +381,10 @@
 
       h5 {
         color: $smokey;
+
+        @include respond(xs) {
+          margin-top: 0;
+        }
       }
 
       a,

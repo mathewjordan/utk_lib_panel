@@ -84,6 +84,12 @@
   font-size: $type-3;
   display: flex;
 
+  @include respond(xs) {
+    font-size: $type-2;
+    flex-wrap: wrap;
+    padding: 0 $golden-ratio-2;
+  }
+
   a,
   a:visited {
     margin-right: $golden-ratio-2;
@@ -91,6 +97,10 @@
     color: $globe !important;
     border-right: 2px solid $gray-1;
     margin-bottom: $golden-ratio-2;
+
+    @include respond(xs) {
+      margin-bottom: 0;
+    }
 
     &:last-child {
       margin-right: 0;
