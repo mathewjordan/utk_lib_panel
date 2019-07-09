@@ -48,7 +48,7 @@
         transition: $transition-all;
         text-shadow: $box-shadow;
         margin-top: 0;
-        color: $gray-1 !important;
+        color: $white !important;
         margin-right: $golden-ratio-3;
 
         @include respond(xs) {
