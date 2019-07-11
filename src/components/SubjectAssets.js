@@ -27,12 +27,27 @@ class SubjectAssets extends Component {
             buildGuides: false,
             update: false
         });
+        if (this.props.subjectData.featured_databases.length === 0)
+            this.setState({
+                allDatabases: 'utk-show-all utk-show-all-enabled'
+            });
+        else
+            this.setState({
+                allDatabases: 'utk-show-all'
+            });
     }
 
     toggleDatabases = () => {
         this.setState({
             allDatabases: 'utk-show-all utk-show-all-enabled'
         });
+    }
+
+    checkIfFeatured = (number) => {
+        if (number.length)
+            return <h5>Recommended Databases</h5>
+        else
+            return null
     }
 
     showAllDatabases (data) {
@@ -46,6 +61,14 @@ class SubjectAssets extends Component {
         this.setState({
             renderedId: this.props.subjectHeader.id
         });
+        if (this.props.subjectData.featured_databases.length === 0)
+            this.setState({
+                allDatabases: 'utk-show-all utk-show-all-enabled'
+            });
+        else
+            this.setState({
+                allDatabases: 'utk-show-all'
+            });
     }
 
     componentWillReceiveProps() {
@@ -58,7 +81,7 @@ class SubjectAssets extends Component {
 
         console.log(data)
 
-        if (data.featured_databases.length !== 0 && build === false) {
+        if (data.total_databases !== 0 && build === false) {
 
             let databasePanes =
                 {
@@ -71,7 +94,7 @@ class SubjectAssets extends Component {
                         <Tab.Pane attached={false}>
                             <div className="utk-subject-guide--databases utk-subject-guide--asset">
                                 <div className="utk-subject-guide--asset--header">
-                                    <h5>Recommended Databases</h5>
+                                    {this.checkIfFeatured(data.featured_databases)}
                                 </div>
                                 <ul>
                                     {data.featured_databases.map((item, key) => (
