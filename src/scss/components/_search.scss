@@ -204,6 +204,8 @@
         border-bottom-right-radius: $golden-ratio-4;
         background-color: $white;
         color: $smokeyx;
+        height: $golden-ratio-4;
+        margin-left: 0;
 
         @include respond(xs) {
           display: none;
