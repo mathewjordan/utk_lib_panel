@@ -14,16 +14,35 @@
       top: 0;
       overflow: hidden;
 
+      .utk-panel-overlay--fade {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        transition: $transition-all-fast;
+
+        $start : rgba($regalia, 0.76);
+        $start-percent : 0;
+        $end : rgba($regalia, 0);
+        $end-percent :47%;
+
+        background: -moz-linear-gradient(top, $start $start-percent, $end $end-percent);
+        background: -webkit-gradient(linear, top, bottom, color-stop($start-percent, $start), color-stop($end-percent, $end));
+        background: -webkit-linear-gradient(top, $start $start-percent, $end $end-percent);
+        background: -o-linear-gradient(top, $start $start-percent, $end $end-percent);
+        background: -ms-linear-gradient(top, $start $start-percent, $end $end-percent);
+        background: linear-gradient(to bottom, $start $start-percent, $end $end-percent);
+      }
+
       > img {
         width: 100%;
         position: absolute;
-        opacity: 1;
-        filter: blur(6px);
         opacity: 0.47;
-        margin-top: -10%;
+        margin-top: -150px;
         transition: $transition-all;
-        transform: scale3d(1.11,1.11,1.11);
-        z-index: 0;
+        transform: scale3d(1,1,1);
       }
 
       .utk-panel-underlay--fade-horz {
@@ -36,7 +55,7 @@
 
         $start : rgba($smokey, 0);
         $start-percent : 0%;
-        $end : rgba($smokeyx, 0.76);
+        $end : rgba($smokeyx, 1);
         $end-percent : 61.8%;
 
         background: -moz-linear-gradient(left, $start $start-percent, $end $end-percent);
@@ -56,9 +75,9 @@
         z-index: 1;
 
         $start : rgba($smokey, 0);
-        $start-percent : 76px;
+        $start-percent : 0;
         $end : $smokeyx;
-        $end-percent : 521px;
+        $end-percent : 323px;
 
         background: -moz-linear-gradient(top, $start $start-percent, $end $end-percent);
         background: -webkit-gradient(linear, top, bottom, color-stop($start-percent, $start), color-stop($end-percent, $end));
@@ -142,8 +161,31 @@
       color: $white;
       background-color: $fountain;
 
+
+
+      > .utk-panel-underlay > .utk-panel-overlay--fade {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+
+        $start : rgba($fountain, 0.47);
+        $start-percent : 0;
+        $end : rgba($fountain, 0);
+        $end-percent :18%;
+
+        background: -moz-linear-gradient(top, $start $start-percent, $end $end-percent);
+        background: -webkit-gradient(linear, top, bottom, color-stop($start-percent, $start), color-stop($end-percent, $end));
+        background: -webkit-linear-gradient(top, $start $start-percent, $end $end-percent);
+        background: -o-linear-gradient(top, $start $start-percent, $end $end-percent);
+        background: -ms-linear-gradient(top, $start $start-percent, $end $end-percent);
+        background: linear-gradient(to bottom, $start $start-percent, $end $end-percent);
+      }
+
       > .utk-panel-underlay > img {
-        transform: scale3d(1.29,1.29,1.29);
+        transform: scale3d(1.11,1.11,1.11);
       }
 
       .utk-panel--search {
