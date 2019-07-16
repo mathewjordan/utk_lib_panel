@@ -20,13 +20,13 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        z-index: 10;
+        z-index: 3;
         transition: $transition-all-fast;
 
-        $start : rgba($regalia, 0.76);
+        $start : rgba($regalia, 1);
         $start-percent : 0;
         $end : rgba($regalia, 0);
-        $end-percent :47%;
+        $end-percent :76%;
 
         background: -moz-linear-gradient(top, $start $start-percent, $end $end-percent);
         background: -webkit-gradient(linear, top, bottom, color-stop($start-percent, $start), color-stop($end-percent, $end));
@@ -43,6 +43,7 @@
         margin-top: -150px;
         transition: $transition-all;
         transform: scale3d(1,1,1);
+        z-index: 1;
       }
 
       .utk-panel-underlay--fade-horz {
@@ -51,7 +52,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        z-index: 1;
+        z-index: 4;
 
         $start : rgba($smokey, 0);
         $start-percent : 0%;
@@ -72,7 +73,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        z-index: 1;
+        z-index: 2;
 
         $start : rgba($smokey, 0);
         $start-percent : 0;
@@ -164,14 +165,7 @@
 
 
       > .utk-panel-underlay > .utk-panel-overlay--fade {
-        top: 0;
-        left: 0;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 10;
-
-        $start : rgba($fountain, 0.47);
+        $start : rgba($fountain, 0.76);
         $start-percent : 0;
         $end : rgba($fountain, 0);
         $end-percent :18%;
