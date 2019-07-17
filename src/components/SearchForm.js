@@ -45,6 +45,7 @@ class SearchForm extends Component {
                     <Input type='text'
                            name="value"
                            placeholder={placeholder}
+                           aria-label={placeholder}
                            onChange={this.handleInputChange}
                            action>
                         <input />
