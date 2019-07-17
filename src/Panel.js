@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import hodges2ndfloor from "./media/hodges2ndfloor.jpg";
+// import hodges2ndfloor from "./media/hodges2ndfloor.jpg";
 
 import Search from "./components/Search";
 import ResearchTools from "./components/ResearchTools";
@@ -48,7 +48,7 @@ class Panel extends Component {
       <div className={`utk-panel-wrap utk-panel-focus-${panelFocus}`}>
         <div className="utk-panel-underlay">
           <div className="utk-panel-overlay--fade"></div>
-          <img src={hodges2ndfloor} alt="A photo of Hodges Library lobby with a heavily applied lens blur." />
+          {/*<img src={hodges2ndfloor} alt="A photo of Hodges Library lobby with a heavily applied lens blur." />*/}
           <div className="utk-panel-underlay--fade-horz"></div>
           <div className="utk-panel-underlay--fade-vert"></div>
         </div>

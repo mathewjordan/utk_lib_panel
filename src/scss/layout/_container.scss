@@ -36,15 +36,15 @@
         background: linear-gradient(to bottom, $start $start-percent, $end $end-percent);
       }
 
-      > img {
-        width: 100%;
-        position: absolute;
-        opacity: 0;
-        margin-top: -150px;
-        transition: $transition-all;
-        transform: scale3d(1,1,1);
-        z-index: 1;
-      }
+      //> img {
+      //  width: 100%;
+      //  position: absolute;
+      //  opacity: 0;
+      //  margin-top: -150px;
+      //  transition: $transition-all;
+      //  transform: scale3d(1,1,1);
+      //  z-index: 1;
+      //}
 
       .utk-panel-underlay--fade-horz {
         top: 0;
@@ -178,9 +178,9 @@
         background: linear-gradient(to bottom, $start $start-percent, $end $end-percent);
       }
 
-      > .utk-panel-underlay > img {
-        transform: scale3d(1.11,1.11,1.11);
-      }
+      //> .utk-panel-underlay > img {
+      //  transform: scale3d(1.11,1.11,1.11);
+      //}
 
       .utk-panel--search {
         width: 0;
