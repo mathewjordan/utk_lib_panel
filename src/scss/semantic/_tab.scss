@@ -2,6 +2,7 @@
 .utk-search {
   .ui.secondary.menu {
     margin-bottom: $golden-ratio-2;
+    display: flex;
 
     @include respond(xs) {
       margin-bottom: $golden-ratio-1;
@@ -15,8 +16,23 @@
       height: $golden-ratio-4;
       padding: 0 $golden-ratio-2;
       border-radius: $golden-ratio-0 !important;
-      background-color: $smokey;
+      background-color: transparent;
       margin-right: $golden-ratio-2;
+      justify-content: space-between;
+      border: 2px solid rgba($white, 0.11);
+      font-weight: 700;
+
+      &:hover,
+      &:focus {
+        border: none;
+        padding: 2px calc(#{$golden-ratio-2} + 2px);
+        background-color: rgba(#000, 0.29);
+        color: $white;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
 
       @include respond(xs) {
         padding: 0 $golden-ratio-1;
@@ -32,16 +48,15 @@
         padding: 0;
         text-align: center;
         border-radius: $golden-ratio-2;
-        color: $rock;
+        color: $gray-1;
       }
 
       &.active {
-        background-color: $gray-1;
-        color: $smokeyx;
-        font-weight: 700;
+        background-color: $white;
+        color: $smokey;
 
         .ui.label {
-          color: $smokeyx;
+          color: $smokey;
         }
       }
     }

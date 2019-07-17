@@ -26,7 +26,7 @@
         $start : rgba($regalia, 1);
         $start-percent : 0;
         $end : rgba($regalia, 0);
-        $end-percent :  400px;
+        $end-percent :  199px;
 
         background: -moz-linear-gradient(top, $start $start-percent, $end $end-percent);
         background: -webkit-gradient(linear, top, bottom, color-stop($start-percent, $start), color-stop($end-percent, $end));
@@ -54,7 +54,7 @@
         height: 100%;
         z-index: 4;
 
-        $start : rgba($smokey, 0);
+        $start : rgba($smokeyx, 0);
         $start-percent : 6%;
         $end : rgba($smokeyx, 0.76);
         $end-percent : 61.8%;
@@ -75,7 +75,7 @@
         height: 100%;
         z-index: 2;
 
-        $start : rgba($smokey, 0);
+        $start : rgba($smokeyx, 0);
         $start-percent : 0;
         $end : $smokeyx;
         $end-percent : 323px;
@@ -168,7 +168,7 @@
         $start : rgba($fountain, 1);
         $start-percent : 0;
         $end : rgba($fountain, 0);
-        $end-percent : 400px;
+        $end-percent : 199px;
 
         background: -moz-linear-gradient(top, $start $start-percent, $end $end-percent);
         background: -webkit-gradient(linear, top, bottom, color-stop($start-percent, $start), color-stop($end-percent, $end));
