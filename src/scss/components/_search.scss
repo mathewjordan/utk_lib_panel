@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
 
+  .utk-search-method-hidden {
+    display: none !important;
+  }
+
   h3 {
     font-size: $type-4;
     font-weight: 400;

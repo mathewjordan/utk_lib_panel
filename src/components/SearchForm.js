@@ -39,9 +39,6 @@ class SearchForm extends Component {
             <Tab.Pane attached={false}>
                 <Form method="post"
                       action={searchEndpoint}>
-                    <Input type='hidden'
-                           name='method'
-                           value={selection}/>
                     <Input type='text'
                            name="value"
                            placeholder={placeholder}
@@ -52,6 +49,10 @@ class SearchForm extends Component {
                         {this.getOptions(options, defaultOption)}
                         <Button type='submit'>Submit</Button>
                     </Input>
+                    <Input className='utk-search-method-hidden'
+                           type='hidden'
+                           name='method'
+                           value={selection}/>
                 </Form>
             </Tab.Pane>
         )
