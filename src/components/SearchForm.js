@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Button, Form, Input, Select, Tab} from "semantic-ui-react";
 
 const searchEndpoint = "https://www.lib.utk.edu/search/submit?go=1"
+// const searchEndpointDebug = "https://utklibrary.test/search/submit/?go=1"
 
 class SearchForm extends Component {
 
@@ -10,14 +11,15 @@ class SearchForm extends Component {
 
         this.state = {
             query: '',
-            option: null
+            option: this.props.options[0].key
         };
     }
 
-    getOptions = (options, defaultOptions) => {
+    getOptions = (options) => {
         if (options) {
             return <Select compact
                            icon
+                           name="primo"
                            className="icon-down-open"
                            options={options}
                            defaultValue={options[0].key}
@@ -33,7 +35,7 @@ class SearchForm extends Component {
 
     render() {
 
-        const {selection, placeholder, options, defaultOption} = this.props
+        const {selection, placeholder, options} = this.props
 
         return (
             <Tab.Pane attached={false}>
@@ -46,13 +48,17 @@ class SearchForm extends Component {
                            onChange={this.handleInputChange}
                            action>
                         <input />
-                        {this.getOptions(options, defaultOption)}
+                        {this.getOptions(options)}
                         <Button type='submit'>Submit</Button>
                     </Input>
                     <Input className='utk-search-method-hidden'
                            type='hidden'
                            name='method'
                            value={selection}/>
+                    <Input className='utk-search-method-hidden'
+                           type='hidden'
+                           name='primo'
+                           value={this.state.option}/>
                 </Form>
             </Tab.Pane>
         )

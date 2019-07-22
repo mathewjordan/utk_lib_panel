@@ -5,7 +5,7 @@ import SearchForm from "./SearchForm";
 const onesearchOptions = [
     { key: 'onesearch', text: 'One Search', value: 'onesearch' },
     { key: 'ut-collections', text: 'UT Collections', value: 'ut-collections' },
-    { key: 'course-reviews', text: 'Course Reserves', value: 'course-reviews' },
+    { key: 'course-reserves', text: 'Course Reserves', value: 'course-reserves' },
 ]
 
 class Search extends Component {
