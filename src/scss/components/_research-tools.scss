@@ -17,7 +17,6 @@
     margin-top: 0;
     opacity: 0.88;
     color: $white !important;
-    -webkit-font-smoothing: antialiased;
 
     @include respond(xs) {
       margin-bottom: $golden-ratio-1;
