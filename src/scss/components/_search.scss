@@ -8,6 +8,31 @@
     flex-direction: column-reverse;
   }
 
+  form {
+    position: relative;
+
+    .utk-search--icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 47px;
+      height: 47px;
+      background-color: transparent;
+      z-index: 2;
+      border-top-left-radius: 29px;
+      border-bottom-left-radius: 29px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+
+      > span {
+        color: $rock;
+        font-size: $type-2;
+      }
+    }
+  }
+
   &--links {
     position: absolute;
     right: 0;
@@ -176,7 +201,7 @@
         font-family: $sans !important;
         height: $golden-ratio-4;
         border: none;
-        padding-left: $golden-ratio-2;
+        padding-left: $golden-ratio-4;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         border-radius: $golden-ratio-4 !important;

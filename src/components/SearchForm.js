@@ -41,6 +41,9 @@ class SearchForm extends Component {
             <Tab.Pane attached={false}>
                 <Form method="post"
                       action={searchEndpoint}>
+                    <span className="utk-search--icon">
+                        <span className="icon-search"></span>
+                    </span>
                     <Input type='text'
                            name="value"
                            placeholder={placeholder}
