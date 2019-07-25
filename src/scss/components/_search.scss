@@ -4,6 +4,61 @@
   display: flex;
   flex-direction: column;
 
+  @include respond(xs) {
+    flex-direction: column-reverse;
+  }
+
+  &--links {
+    position: absolute;
+    right: 0;
+    font-size: $type-0;
+    font-weight: 700;
+    display: flex;
+    text-align: right;
+    padding-right: $golden-ratio-6;
+    margin-top: 3px;
+    text-transform: uppercase;
+
+    @include respond(md) {
+      padding-right: $golden-ratio-4;
+    }
+
+    @include respond(xs, sm) {
+      padding-right: $golden-ratio-0;
+    }
+
+    @include respond(xs) {
+      position: static;
+      justify-content: flex-end;
+      margin-top: $golden-ratio-1;
+      padding-right: $golden-ratio-0;
+    }
+
+    a,
+    a:visited {
+      color: $white;
+      margin-left: $golden-ratio-1;
+      text-decoration: none;
+      display: flex;
+
+      span {
+        color: $orange;
+        font-size: 9px;
+        margin-left: 2px;
+        margin-top: -1px;
+      }
+
+      &:hover,
+      &:focus {
+        color: $white;
+
+        span {
+          color: $orange;
+        }
+      }
+    }
+  }
+
   .utk-search-method-hidden {
     display: none !important;
   }
@@ -24,7 +79,7 @@
     opacity: 1;
 
     @include respond(md) {
-      padding-right: $golden-ratio-5;
+      padding-right: $golden-ratio-4;
     }
 
     @include respond(sm) {
@@ -34,7 +89,6 @@
 
     @include respond(xs) {
       padding-right: 0;
-      padding-bottom: $golden-ratio-3;
     }
 
     > .ui.menu {
@@ -229,6 +283,28 @@
   }
 
   .utk-search {
+    &--links {
+      padding-right: 0;
+
+      a,
+      a:visited {
+        color: $globe;
+
+        span {
+          color: $globe;
+        }
+
+        &:hover,
+        &:focus {
+          color: $globe;
+
+          span {
+            color: $globe;
+          }
+        }
+      }
+    }
+
     .utk-search-tabs {
       @include respond(xs) {
         margin-bottom: 0;

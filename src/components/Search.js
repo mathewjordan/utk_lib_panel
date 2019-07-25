@@ -27,6 +27,10 @@ class Search extends Component {
         return (
             <div className="utk-panel--search">
                 <div className="utk-search">
+                    <div className="utk-search--links">
+                        <a href="https://utk-almaprimo.hosted.exlibrisgroup.com/primo-explore/search?vid=01UTK&mode=advanced">Advanced<span className="icon-right-big"></span></a>
+                        <a href="https://utk-almaprimo.hosted.exlibrisgroup.com/primo-explore/browse?vid=01UTK">Browse<span className="icon-right-big"></span></a>
+                    </div>
                     <Tab menu={{ text: true }} panes={panes} className="utk-search-tabs" />
                 </div>
             </div>
