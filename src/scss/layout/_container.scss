@@ -160,14 +160,14 @@
 
     &.utk-panel-focus-research-tools {
       color: $white;
-      background-color: $fountain;
+      background-color: $globe;
 
 
 
       > .utk-panel-underlay > .utk-panel-overlay--fade {
-        $start : rgba($fountain, 1);
+        $start : rgba($globe, 1);
         $start-percent : 0;
-        $end : rgba($fountain, 0);
+        $end : rgba($globe, 0);
         $end-percent : 199px;
 
         background: -moz-linear-gradient(top, $start $start-percent, $end $end-percent);

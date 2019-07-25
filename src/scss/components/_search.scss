@@ -131,8 +131,10 @@
         transition: $transition-all;
         text-shadow: $box-shadow;
         margin-top: 0;
-        color: $white !important;
+        opacity: 0.88;
+        color: $white;
         margin-right: $golden-ratio-3;
+        -webkit-font-smoothing: antialiased;
 
         @include respond(xs) {
           font-size: $type-1;
