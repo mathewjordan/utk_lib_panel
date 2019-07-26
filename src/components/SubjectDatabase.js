@@ -39,7 +39,9 @@ class SubjectDatabase extends Component {
 
         return (
             <li className={featuredClass + this.state.delay}>
-                <a href={item.friendly_url}>
+                <a href={item.friendly_url}
+                   data-libguide-url={item.url}
+                   aria-label={item.name}>
                     <h5>{item.name}</h5>
                 </a>
                 <div dangerouslySetInnerHTML={{__html: entities.decode(item.description)}} />
