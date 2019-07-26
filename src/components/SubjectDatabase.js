@@ -27,6 +27,9 @@ class SubjectDatabase extends Component {
     render() {
 
         const {item, featured} = this.props
+
+        console.log(item)
+
         const entities = new Entities();
 
         let featuredClass = ''
@@ -36,7 +39,7 @@ class SubjectDatabase extends Component {
 
         return (
             <li className={featuredClass + this.state.delay}>
-                <a href={item.url}>
+                <a href={item.friendly_url}>
                     <h5>{item.name}</h5>
                 </a>
                 <div dangerouslySetInnerHTML={{__html: entities.decode(item.description)}} />

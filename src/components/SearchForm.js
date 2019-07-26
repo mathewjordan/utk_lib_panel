@@ -40,6 +40,7 @@ class SearchForm extends Component {
         return (
             <Tab.Pane attached={false}>
                 <Form method="post"
+                      className="utk-search--form"
                       action={searchEndpoint}>
                     <span className="utk-search--icon">
                         <span className="icon-search"></span>
