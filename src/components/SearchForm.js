@@ -48,6 +48,17 @@ class SearchForm extends Component {
 
     handleOptionChange = (e, {value}) => this.setState({ option : value })
 
+    componentWillUpdate(nextProps, nextState) {
+        const tagManagerArgs = {
+            gtmId: 'GTM-MB99NS',
+            dataLayer: {
+                searchMethod: nextProps.selection,
+            }
+        }
+
+        TagManager.initialize(tagManagerArgs)
+    }
+
     render() {
 
         const {selection, placeholder, options} = this.props
