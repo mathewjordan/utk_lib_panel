@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Button, Form, Input, Select, Tab} from "semantic-ui-react";
+import TagManager from 'react-gtm-module'
 
 const searchEndpoint = "https://www.lib.utk.edu/search/submit?go=1"
 // const searchEndpointDebug = "https://utklibrary.test/search/submit/?go=1"
@@ -29,7 +30,21 @@ class SearchForm extends Component {
         }
     }
 
-    handleInputChange = (e, {value}) => this.setState({ query : value })
+    handleInputChange = (e) => {
+        this.setState({
+            query: e.target.value
+        })
+
+        const tagManagerArgs = {
+            gtmId: 'GTM-MB99NS',
+            dataLayer: {
+                searchValue: e.target.value,
+                searchMethod: this.props.selection,
+            }
+        }
+
+        TagManager.initialize(tagManagerArgs)
+    }
 
     handleOptionChange = (e, {value}) => this.setState({ option : value })
 
