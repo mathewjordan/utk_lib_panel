@@ -23,9 +23,9 @@
         z-index: 3;
         transition: $transition-all-fast;
 
-        $start : rgba($regalia, 1);
+        $start : rgba($smokey, 1);
         $start-percent : 0;
-        $end : rgba($regalia, 0);
+        $end : rgba($smokey, 0);
         $end-percent :  199px;
 
         background: -moz-linear-gradient(top, $start $start-percent, $end $end-percent);
@@ -91,7 +91,7 @@
 
     .utk-panel {
       font-size: $type-3;
-      padding: $golden-ratio-5 0 0;
+      padding: $golden-ratio-4 0 0;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -120,7 +120,7 @@
     }
 
     &.utk-panel-focus-search {
-      background-color: $regalia;
+      background-color: $smokey;
       color: $white;
 
       .utk-panel--search {
