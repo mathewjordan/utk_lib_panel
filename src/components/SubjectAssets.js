@@ -190,7 +190,7 @@ class SubjectAssets extends Component {
         const {subjectData} = this.props
 
         this.buildDatabasePane(subjectData, id)
-        // this.buildGuidesPane(subjectData, id)
+        this.buildGuidesPane(subjectData, id)
 
         return (
             <div className={`utk-subject-guide`} data-subject-id={id}>
