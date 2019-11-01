@@ -61,6 +61,8 @@ class SubjectMini extends Component {
 
     fetchSubjectData (id) {
 
+        console.log(libGuidesEndpoint + id)
+
         fetch(libGuidesEndpoint + id, {
             headers : {
                 'Content-Type': 'application/json',

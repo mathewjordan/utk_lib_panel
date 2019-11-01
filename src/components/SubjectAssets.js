@@ -79,8 +79,6 @@ class SubjectAssets extends Component {
 
         const build = this.state.buildDatabase;
 
-        console.log(data)
-
         if (data.total_databases !== 0 && build === false) {
 
             let databasePanes =
@@ -192,7 +190,7 @@ class SubjectAssets extends Component {
         const {subjectData} = this.props
 
         this.buildDatabasePane(subjectData, id)
-        this.buildGuidesPane(subjectData, id)
+        // this.buildGuidesPane(subjectData, id)
 
         return (
             <div className={`utk-subject-guide`} data-subject-id={id}>

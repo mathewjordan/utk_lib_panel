@@ -70,6 +70,7 @@ class Subject extends Component {
         })
             .then(response => response.json())
             .then(data => {
+
                 this.setState({
                     data: data,
                     id: id
@@ -81,6 +82,7 @@ class Subject extends Component {
     }
 
     renderSubject = (data) => {
+
         if (data && this.props.activeSubject) {
             if (data)
                 return <SubjectAssets subjectHeader={this.props.activeSubject}
@@ -96,7 +98,6 @@ class Subject extends Component {
     }
 
     render() {
-
         return (
             <div className="utk-panel--subject-guide">
                 {this.renderSubject(this.state.data)}
