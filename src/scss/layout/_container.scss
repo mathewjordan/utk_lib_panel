@@ -14,6 +14,7 @@
       top: 0;
       overflow: hidden;
 
+
       .utk-panel-overlay--fade {
         top: 0;
         left: 0;
@@ -54,9 +55,9 @@
         height: 100%;
         z-index: 4;
 
-        $start : rgba($smokeyx, 0);
+        $start : rgba($smokey, 0);
         $start-percent : 6%;
-        $end : rgba($smokeyx, 0.76);
+        $end : rgba($smokey, 0.76);
         $end-percent : 61.8%;
 
         background: -moz-linear-gradient(left, $start $start-percent, $end $end-percent);

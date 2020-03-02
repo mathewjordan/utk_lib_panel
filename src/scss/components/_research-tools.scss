@@ -41,7 +41,7 @@
     transition: background-color 110ms ease-in-out;
     border: 2px solid rgba($white, 0.11);
     border-radius: $golden-ratio-0;
-    padding: 0 $golden-ratio-1;
+    padding: 0 $golden-ratio-0;
     height: $golden-ratio-3;
 
     @include respond(xs) {
@@ -51,7 +51,7 @@
     &:hover,
     &:focus {
       border: none;
-      padding: 2px calc(#{$golden-ratio-1} + 2px);
+      padding: 2px calc(#{$golden-ratio-0} + 2px);
       background-color: rgba(#000, 0.29);
     }
 
