@@ -21,30 +21,8 @@ class Subject extends Component {
         const current = this.props.activeSubject
 
         if (current) {
-            const key = "utk_lib_panel_recent"
-            const recent = JSON.parse(sessionStorage.getItem(key))
-
             if (data === null || id !== current.id) {
-
-                /*
-                 * checks session storage for modern browser stored data.
-                 * gets local data if exists, else fetches from endpoint.
-                 */
-
-                if (_.some(recent, ['id', current.id]))
-                    this.getSessionData(recent, current.id)
-
-                else
-                    this.fetchSubjectData(current.id)
-
-            } else {
-                current.libguides = data
-                let store = [current]
-
-                if (recent)
-                    store = _.concat([current], recent)
-
-                sessionStorage.setItem(key, JSON.stringify(_.uniqBy(store, 'id')))
+                this.fetchSubjectData(current.id)
             }
         }
     }

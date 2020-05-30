@@ -21,47 +21,13 @@ class SubjectMini extends Component {
         const current = this.props.activeSubject
 
         if (current) {
-            const key = "utk_lib_panel_recent"
-            const recent = JSON.parse(sessionStorage.getItem(key))
-
             if (data === null || id !== current) {
-
-                /*
-                 * checks session storage for modern browser stored data.
-                 * gets local data if exists, else fetches from endpoint.
-                 */
-
-                if (_.some(recent, ['id', current]))
-                    this.getSessionData(recent, current)
-
-                else
-                    this.fetchSubjectData(current)
-
-            } else {
-                let store = [current]
-
-                if (recent)
-                    store = _.concat([current], recent)
-
-                sessionStorage.setItem(key, JSON.stringify(_.uniqBy(store, 'id')))
+                this.fetchSubjectData(current)
             }
         }
     }
 
-    getSessionData (recent, id) {
-        let localData = _.find(recent, { 'id': id})
-
-        this.setState({
-            data: localData.libguides,
-            id: id
-        });
-
-        return null
-    }
-
     fetchSubjectData (id) {
-
-        console.log(libGuidesEndpoint + id)
 
         fetch(libGuidesEndpoint + id, {
             headers : {
