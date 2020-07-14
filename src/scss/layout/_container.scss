@@ -24,17 +24,17 @@
         z-index: 3;
         transition: $transition-all-fast;
 
-        $start : rgba($smokey, 1);
-        $start-percent : 0;
-        $end : rgba($smokey, 0);
-        $end-percent :  199px;
-
-        background: -moz-linear-gradient(top, $start $start-percent, $end $end-percent);
-        background: -webkit-gradient(linear, top, bottom, color-stop($start-percent, $start), color-stop($end-percent, $end));
-        background: -webkit-linear-gradient(top, $start $start-percent, $end $end-percent);
-        background: -o-linear-gradient(top, $start $start-percent, $end $end-percent);
-        background: -ms-linear-gradient(top, $start $start-percent, $end $end-percent);
-        background: linear-gradient(to bottom, $start $start-percent, $end $end-percent);
+        //$start : rgba($smokey, 1);
+        //$start-percent : 0;
+        //$end : rgba($smokey, 0);
+        //$end-percent :  199px;
+        //
+        //background: -moz-linear-gradient(top, $start $start-percent, $end $end-percent);
+        //background: -webkit-gradient(linear, top, bottom, color-stop($start-percent, $start), color-stop($end-percent, $end));
+        //background: -webkit-linear-gradient(top, $start $start-percent, $end $end-percent);
+        //background: -o-linear-gradient(top, $start $start-percent, $end $end-percent);
+        //background: -ms-linear-gradient(top, $start $start-percent, $end $end-percent);
+        //background: linear-gradient(to bottom, $start $start-percent, $end $end-percent);
       }
 
       //> img {
@@ -55,17 +55,17 @@
         height: 100%;
         z-index: 4;
 
-        $start : rgba($smokey, 0);
-        $start-percent : 6%;
-        $end : rgba($smokey, 0.76);
-        $end-percent : 61.8%;
-
-        background: -moz-linear-gradient(left, $start $start-percent, $end $end-percent);
-        background: -webkit-gradient(linear, left, bottom, color-stop($start-percent, $start), color-stop($end-percent, $end));
-        background: -webkit-linear-gradient(left, $start $start-percent, $end $end-percent);
-        background: -o-linear-gradient(left, $start $start-percent, $end $end-percent);
-        background: -ms-linear-gradient(left, $start $start-percent, $end $end-percent);
-        background: linear-gradient(to right, $start $start-percent, $end $end-percent);
+        //$start : rgba($white, 0);
+        //$start-percent : 6%;
+        //$end : rgba($smokey, 0.76);
+        //$end-percent : 61.8%;
+        //
+        //background: -moz-linear-gradient(left, $start $start-percent, $end $end-percent);
+        //background: -webkit-gradient(linear, left, bottom, color-stop($start-percent, $start), color-stop($end-percent, $end));
+        //background: -webkit-linear-gradient(left, $start $start-percent, $end $end-percent);
+        //background: -o-linear-gradient(left, $start $start-percent, $end $end-percent);
+        //background: -ms-linear-gradient(left, $start $start-percent, $end $end-percent);
+        //background: linear-gradient(to right, $start $start-percent, $end $end-percent);
       }
 
       .utk-panel-underlay--fade-vert {
@@ -76,17 +76,17 @@
         height: 100%;
         z-index: 2;
 
-        $start : rgba($smokeyx, 0);
-        $start-percent : 0;
-        $end : $smokeyx;
-        $end-percent : 323px;
-
-        background: -moz-linear-gradient(top, $start $start-percent, $end $end-percent);
-        background: -webkit-gradient(linear, top, bottom, color-stop($start-percent, $start), color-stop($end-percent, $end));
-        background: -webkit-linear-gradient(top, $start $start-percent, $end $end-percent);
-        background: -o-linear-gradient(top, $start $start-percent, $end $end-percent);
-        background: -ms-linear-gradient(top, $start $start-percent, $end $end-percent);
-        background: linear-gradient(to bottom, $start $start-percent, $end $end-percent);
+        //$start : rgba($smokeyx, 0);
+        //$start-percent : 0;
+        //$end : $smokeyx;
+        //$end-percent : 323px;
+        //
+        //background: -moz-linear-gradient(top, $start $start-percent, $end $end-percent);
+        //background: -webkit-gradient(linear, top, bottom, color-stop($start-percent, $start), color-stop($end-percent, $end));
+        //background: -webkit-linear-gradient(top, $start $start-percent, $end $end-percent);
+        //background: -o-linear-gradient(top, $start $start-percent, $end $end-percent);
+        //background: -ms-linear-gradient(top, $start $start-percent, $end $end-percent);
+        //background: linear-gradient(to bottom, $start $start-percent, $end $end-percent);
       }
     }
 
@@ -121,8 +121,8 @@
     }
 
     &.utk-panel-focus-search {
-      background-color: $smokey;
-      color: $white;
+      background-color: $white;
+      color: $smokey;
 
       .utk-panel--search {
         width: $gr-long;
