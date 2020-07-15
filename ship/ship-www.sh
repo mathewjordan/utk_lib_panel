@@ -5,6 +5,6 @@ rsync -av --delete dist/ ~/Sites/dev/utk-libraries/wp-content/themes/utk_lib_wp_
 
 cd ~/Sites/dev/utk-libraries/wp-content/themes/utk_lib_wp_theme/;
 yarn build;
-cd ~/Sites/react/utk_lib_panel
+cd ~/Sites/dev/react/utk_lib_panel
 
 echo 'Shipped Complete';
