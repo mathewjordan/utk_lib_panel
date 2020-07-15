@@ -56,6 +56,10 @@
     text-transform: uppercase;
     -webkit-font-smoothing: antialiased !important;
 
+    &.utk-research-tools--links {
+      padding-right: 0;
+    }
+
     @include respond(md) {
       padding-right: $golden-ratio-4;
     }

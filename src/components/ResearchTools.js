@@ -95,6 +95,10 @@ class ResearchTools extends Component {
             <div className="utk-panel--research-tools">
                 <div className="utk-research-tools">
                     <h3>Research Tools</h3>
+                    <div className="utk-search--links utk-research-tools--links">
+                        <a href="https://www.lib.utk.edu/databases/">Databases<span className="icon-right-big"></span></a>
+                        <a href="https://libguides.utk.edu/">Guides<span className="icon-right-big"></span></a>
+                    </div>
                     <Dropdown
                         text={this.dropdownText(this.props.activeSubject)}
                         icon='icon-down-open'
