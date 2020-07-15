@@ -12,7 +12,6 @@ body .utk-research-tools .ui.labeled.icon.button {
   white-space: nowrap;
   height: 47px;
   padding: 0 calc(65px) 0 18px !important;
-  box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29);
   max-width: 100%;
   transition: all 110ms ease-in-out;
   position: relative;
@@ -20,6 +19,7 @@ body .utk-research-tools .ui.labeled.icon.button {
   -webkit-tap-highlight-color: transparent;
   outline: none;
   width: 100% !important;
+  box-shadow: $box-shadow;
 
   @include respond(xs) {
     font-size: $type-0 !important;
@@ -157,10 +157,10 @@ body .utk-research-tools {
     display: inline-flex;
     align-items: center;
     align-content: center;
-    background-color: #f6f6f6;
+    background-color: #ffffff;
     color: $smokey;
     font-weight: 400;
-    border-radius: 47px;
+    border-radius: 0;
     font-size: 15px;
     white-space: nowrap;
     height: 47px;
@@ -181,8 +181,8 @@ body .utk-research-tools {
     margin: 0 !important;
     min-width: 100% !important;
     width: auto !important;
-    border-bottom-right-radius: $golden-ratio-0 !important;
-    border-bottom-left-radius: $golden-ratio-0 !important;
+    //border-bottom-right-radius: $golden-ratio-0 !important;
+    //border-bottom-left-radius: $golden-ratio-0 !important;
     max-height: 38.2vh;
   }
 

@@ -114,6 +114,17 @@
     > .ui.menu {
       margin-bottom: $golden-ratio-2;
 
+      &::before {
+        content: 'Search';
+        display: block;
+        margin-right: $golden-ratio-3;
+        color: $white;
+        opacity: 0.8;
+        font-size: $type-3;
+        -webkit-font-smoothing: antialiased;
+        margin-bottom: -3px;
+      }
+
       @include respond(xs) {
         flex-direction: row;
         flex-wrap: wrap;
@@ -165,7 +176,6 @@
 
     .ui.action.input {
       width: 100%;
-      border: 1px solid $gray-1;
       border-radius: 0;
 
       @include respond(xs) {
@@ -257,7 +267,6 @@
         height: $golden-ratio-4;
         margin-left: 0;
         background-color: $gray-0;
-        border-left: 1px solid $gray-1;
         color: $smokey;
 
         @include respond(xs) {

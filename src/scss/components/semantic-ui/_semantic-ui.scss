@@ -32,9 +32,9 @@ body {
     background-color: $gray-0;
     color: $smokeyx;
     font-weight: 700;
-    border-radius: $golden-ratio-4;
-    border-top-right-radius: $golden-ratio-2;
-    border-bottom-right-radius: $golden-ratio-2;
+    //border-radius: $golden-ratio-4;
+    //border-top-right-radius: $golden-ratio-2;
+    //border-bottom-right-radius: $golden-ratio-2;
     font-size: $type-2;
     white-space: nowrap;
     height: $golden-ratio-4;
@@ -57,10 +57,10 @@ body {
       width: $golden-ratio-4;;
       background-color: $orange !important;
       border-radius: 0;
-      border-top-right-radius: $golden-ratio-4;
-      border-bottom-right-radius: $golden-ratio-4;
-      -webkit-clip-path: polygon(0 0,100% 0,100% 100%,6px 100%)!important;
-      clip-path: polygon(0 0,100% 0,100% 100%,6px 100%)!important;
+      //border-top-right-radius: $golden-ratio-4;
+      //border-bottom-right-radius: $golden-ratio-4;
+      //-webkit-clip-path: polygon(0 0,100% 0,100% 100%,6px 100%)!important;
+      //clip-path: polygon(0 0,100% 0,100% 100%,6px 100%)!important;
 
       &::before {
         color: $white;

@@ -9,9 +9,11 @@
   }
 
   h3 {
-    font-size: $type-2;
-    font-weight: 700;
-    margin-bottom: $type-3;
+    color: $white;
+    opacity: 0.8;
+    font-size: $type-3;
+    font-weight: 400;
+    margin-bottom: 15px;
     transition: $transition-all;
     text-shadow: $box-shadow;
     margin-top: 0;
@@ -38,7 +40,6 @@
     align-items: center;
     transition: background-color 110ms ease-in-out;
     border: 2px solid rgba($white, 0.11);
-    border-radius: $golden-ratio-0;
     padding: 0 $golden-ratio-0;
     height: $golden-ratio-3;
 
