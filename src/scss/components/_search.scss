@@ -10,6 +10,18 @@
 
   form {
     position: relative;
+    box-shadow: $box-shadow;
+
+    &::before {
+      width: 100%;
+      height: 6px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -6px;
+      content: ' ';
+      background-color: rgba($white, 0.18);
+    }
 
     .utk-search--icon {
       position: absolute;
@@ -150,12 +162,12 @@
 
         &::after {
           width: 100%;
-          height: 2px;
+          height: 6px;
           display: block;
           position: absolute;
           left: 0;
-          bottom: -6px;
-          content: ' ';
+          bottom: -18px;
+          background-color: $orange;
         }
 
         &:hover,
