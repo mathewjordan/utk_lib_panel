@@ -119,6 +119,7 @@
           font-weight: 700;
           margin-bottom: $golden-ratio-1;
           color: white;
+          text-transform: uppercase;
 
           @include respond(xs) {
             font-size: $type-1;
@@ -202,28 +203,29 @@
       padding: 0;
 
       li {
-        margin-bottom: $golden-ratio-1;
-        padding: $golden-ratio-1 $golden-ratio-2;
-        border-radius: $golden-ratio-1;
-        border: 2px solid rgba($white, 0.11);
+        padding: $golden-ratio-2 $golden-ratio-3;
+        background-color: $white;
         position: relative;
+        color: $smokey;
+        box-shadow: $box-shadow-float;
+        border-left: $golden-ratio-1 solid $gray-1;
 
         &.utk-featured a > h5::after {
           content: '\e80c';
           display: block;
-          width: $type-2;
-          height: $type-2;
+          width: $type-4;
+          height: $type-4;
           border-radius: $type-2;
-          line-height: $type-2;
+          line-height: $type-4;
           text-align: center;
-          font-size: $type-2;
+          font-size: $type-4;
           font-family: 'fontello';
           background-color: transparent;
-          color: $smokey;
+          color: $orange;
           margin-left: $golden-ratio-0;
           position: absolute;
-          right: $type-2;
-          top: $type-2;
+          right: $type-3;
+          top: $type-3;
           text-decoration: none !important;
         }
 
@@ -242,56 +244,40 @@
 
         > a,
         > a:visited {
-          color: $eureka !important;
+          color: $smokey !important;
           display: flex;
           flex-direction: column;
           transition: background-color 110ms ease-in-out;
 
           * {
-            color: inherit !important;
-          }
-
-          &:hover,
-          &:focus {
-            color: $eureka !important;
-            border: none;
-
-            > h5 {
-              text-decoration: underline;
-
-              &::after {
-                text-decoration: none !important;
-              }
-            }
+            color: $smokey !important;
           }
 
           > h5 {
             display: flex;
-            font-size: $type-2;
+            font-size: $type-3 !important;
             font-weight: 400;
-            margin-bottom: $golden-ratio-0;
+            margin-bottom: 0;
             text-transform: none;
-            color: $white;
+            color: $globe !important;
             transition: $transition-all-fast;
             margin-top: 0 !important;
             align-content: flex-end;
             align-items: flex-end;
             padding-right: $type-2;
-
-            @include respond(xs) {
-              display: flex;
-              line-height: 1.47em;
-              white-space: normal;
-            }
+            text-decoration: underline;
+            white-space: normal;
+            line-height: 1.47em;
           }
         }
 
         > div {
           line-height: 1.47em;
           white-space: normal;
-          font-size: $type-1;
-          color: $white;
+          font-size: $type-2;
+          color: $smokey;
           transition: $transition-all-fast;
+          margin-top: $golden-ratio-1;
 
           a,
           a:visited {
@@ -302,46 +288,22 @@
     }
 
     .utk-show-all--toggle {
-      display: block;
-      height: $golden-ratio-4;
-      background-color: $smokey;
+      width: auto;
+      font-size: $type-2;
+      font-weight: 400;
+      color: $white;
+      margin-top: $golden-ratio-2;
+      align-items: center;
+      border: 2px solid rgba($white, 0.11);
+      padding: $golden-ratio-1;
       text-align: center;
-      font-size: $type-1 !important;
-      line-height: $golden-ratio-4;
-      border-radius: $golden-ratio-0;
-      color: $gray-1 !important;
-      font-weight: 700;
-    }
-  }
 
-  &--guides {
-    ul {
-      @include respond(xs) {
-        padding: 0 $golden-ratio-2;
-      }
-
-      li {
+      &:hover,
+      &:focus {
+        color: $white;
         border: none;
-        padding: 0;
-        margin-bottom: $golden-ratio-0;
-
-        h5 {
-          font-size: $type-2 !important;
-          margin-bottom: 0 !important;
-        }
-      }
-    }
-  }
-
-  &--journals {
-    ul {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-
-      > li {
-        width: 25%;
-        white-space: normal;
+        padding: calc(#{$golden-ratio-1} + 2px);
+        background-color: rgba(black, 0.618);
       }
     }
   }

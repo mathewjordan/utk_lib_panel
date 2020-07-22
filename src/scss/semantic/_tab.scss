@@ -9,13 +9,13 @@
     }
 
     a.item {
-      color: $gray-1;
+      color: $white;
       font-size: $type-2;
       font-family: $sans !important;
       align-self: flex-start;
       height: $golden-ratio-4;
       padding: 0 $golden-ratio-2;
-      border-radius: $golden-ratio-0 !important;
+      border-radius: 0 !important;
       background-color: transparent;
       margin-right: $golden-ratio-2;
       justify-content: space-between;
@@ -26,7 +26,7 @@
       &:focus {
         border: none;
         padding: 2px calc(#{$golden-ratio-2} + 2px);
-        background-color: rgba(#000, 0.29);
+        background-color: rgba(#000, 0.618);
         color: $white;
       }
 
@@ -47,16 +47,17 @@
         line-height: $golden-ratio-2;
         padding: 0;
         text-align: center;
-        border-radius: $golden-ratio-2;
+        border-radius: $golden-ratio-0;
         color: $gray-1;
       }
 
       &.active {
-        background-color: $white;
-        color: $smokeyx;
+        background-color: rgba($summitt, 0.11);
+        color: $white;
+        border-color: $summitt;
 
         .ui.label {
-          color: $smokeyx;
+          color: $white;
         }
       }
     }

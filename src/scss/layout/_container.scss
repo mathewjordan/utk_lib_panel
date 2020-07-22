@@ -45,8 +45,9 @@
         width: 100%;
         height: 100%;
         z-index: 4;
+        transition: $transition-all;
 
-        $start: rgba($summitt, 1);
+        $start: rgba($fountain, 1);
         $start-percent: 18%;
         $end: rgba($regalia, 1);
         $end-percent: 90%;
@@ -67,7 +68,7 @@
         height: 100%;
         z-index: 4;
 
-        $start: rgba($fountain, 1);
+        $start: rgba($summitt, 1);
         $start-percent: 0;
         $end: rgba($fountain, 0);
         $end-percent: 18%;
