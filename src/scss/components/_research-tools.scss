@@ -8,6 +8,10 @@
     padding-bottom: $golden-ratio-3;
   }
 
+  @include respond(xs) {
+    flex-direction: column-reverse;
+  }
+
   h3 {
     color: $white;
     opacity: 0.8;
@@ -20,11 +24,8 @@
     -webkit-font-smoothing: antialiased !important;
 
     @include respond(xs) {
-      margin-bottom: $golden-ratio-1;
-      font-size: $type-1;
-      font-weight: 700;
-      margin-right: $golden-ratio-2;
-      text-transform: uppercase;
+      order: 1;
+      margin-top: $golden-ratio-2;
     }
   }
 
@@ -62,22 +63,22 @@
 }
 
 .utk-panel-focus-research-tools .utk-research-tools {
-  padding-right: $golden-ratio-5;
+  padding-right: $golden-ratio-4;
 
   @include respond(xs, sm) {
     padding-right: 0;
   }
 
   &--links {
-    right: $golden-ratio-5;
+    right: $golden-ratio-4;
+
+    @include respond(xs, sm) {
+      padding-right: 0;
+    }
   }
 
   .utk-collapse-research-tools {
     opacity: 1;
-
-    @include respond(xs) {
-      display: inline-flex;
-    }
   }
 
   &--option {
